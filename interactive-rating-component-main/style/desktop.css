@@ -1,0 +1,22 @@
+
+@media screen and (min-width: 500px) {
+
+    .card {
+        width: 375px;
+        height: 375px;
+        border-radius: 30px;
+    }
+
+    .card-content {
+        margin: 25px 25px;
+        display: flex;
+        flex-direction: column;
+        color: var(--neutral-color-white);
+    }
+
+    .card-content h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-top: 25px;
+    }
+}
