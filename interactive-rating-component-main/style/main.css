@@ -122,6 +122,16 @@ form {
     cursor: pointer;
 }
 
+.submit-button:hover {
+    color: var(--primary-color);
+    background-color: var(--neutral-color-grey-200);
+}
+
+.submit-button:active {
+    color: var(--primary-color);
+    background-color: var(--neutral-color-white);
+}
+
 .card-thanks {
     display: none;
     flex-direction: column;
