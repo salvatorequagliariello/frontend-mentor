@@ -5,38 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style/desktop.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/reset.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
   <article class="card">
-    <section class="card-content">
-      <img class="card-content__round-border star" src="./images/icon-star.svg" alt="star icon">
+    <section id="card-content" class="card-content">
+      <img class="card-content__round-star star" src="./images/icon-star.svg" alt="star icon">
 
       <h1>How did we do?</h1>
       
       <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
       
-      <form action="">
-        <button class="">1</button> 
-        <button class="">2</button> 
-        <button class="">3</button> 
-        <button class="">4</button> 
-        <button class="">5</button> 
-        <button type="submit">submit</button>
+      <form action="" id="myForm">
+        <div class="buttons">
+          <button type="button" onclick="myFunction(1);" class="card-content__round-border">1</button> 
+          <button type="button" onclick="myFunction(2);" class="card-content__round-border">2</button> 
+          <button type="button" onclick="myFunction(3);" class="card-content__round-border">3</button> 
+          <button type="button" onclick="myFunction(4);" class="card-content__round-border">4</button> 
+          <button type="button" onclick="myFunction(5);" class="card-content__round-border">5</button> 
+        </div>
+        <button class="submit-button" type="submit">Submit</button>
       </form>
     </section>
 
-    <section class="card-thanks">
+    <section id="card-thanks" class="card-thanks">
       <img src="./images/illustration-thank-you.svg" alt="">
-      <p class="card-thanks__selected">You selected <!-- Add rating here --> out of 5</p>
+      <p id="message" class="card-thanks__selected">You selected out of 5</p>
       
       <h1>Thank you!</h1>
       
       <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
     </section>
-    
+
   </article>
 
+  <script src="script.js"></script>
 </body>
 </html>

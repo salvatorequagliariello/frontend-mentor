@@ -1,0 +1,124 @@
+:root {
+    --primary-color: hsl(25, 97%, 53%);
+    --neutral-color-white: hsl(0, 0%, 100%);
+    --neutral-color-grey-200: hsl(217, 12%, 63%);
+    --neutral-color-grey-400: hsl(216, 12%, 54%);
+    --neutral-color-blue-700: hsl(213, 19%, 18%);
+    --neutral-color-blue-900: hsl(216, 12%, 8%);
+    
+    --font-primary: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: var(--neutral-color-blue-900);
+}
+
+* {
+    font-family: var(--font-primary);
+}
+
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 327px;
+    height: 362px;
+    background: rgb(47,56,69);
+    background: linear-gradient(180deg, rgba(47,56,69,1) 0%, rgba(28,35,45,1) 50%);
+    border-radius: 15px;
+    font-family: var(--font-primary);
+}
+
+.card-content {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: var(--neutral-color-white);
+}
+
+.star {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.card-content__round-star {
+    padding: 12px;
+    background-color: hsla(217, 12%, 63%, 0.1);
+    border-radius: 100%;
+}
+
+.card-content h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.card-content p {
+    margin-top: 10px;
+    color: var(--neutral-color-grey-200);
+    font-size: 0.9rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content__round-border {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    
+    color: var(--neutral-color-grey-200);
+    border: none;
+    outline: none;
+    background-color: hsla(217, 12%, 63%, 0.1);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.card-content__round-border:hover {
+    background-color: var(--neutral-color-grey-400);
+    color: var(--neutral-color-blue-700);
+}
+
+.card-content__round-border:active {
+    background-color: var(--primary-color);
+    color: var(--neutral-color-white);
+}
+
+.card-content__round-border:focus {
+    background-color: var(--primary-color);
+    color: var(--neutral-color-white);
+}
+
+.card-content__round-border:visited {
+    background-color: var(--primary-color);
+    color: var(--neutral-color-white);
+}
+
+.submit-button {
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--neutral-color-white);
+    border-radius: 20px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.card-thanks {
+    display: none;
+}
+
