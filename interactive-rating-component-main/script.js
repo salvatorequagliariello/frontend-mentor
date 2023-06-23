@@ -11,6 +11,6 @@ let number;
 
 function myFunction(givenNumber){
     number = givenNumber;
-    let message =  `<p id="message" class="card-thanks__selected">You selected out of ${number}</p>`
+    let message =  `<p id="message" class="card-thanks__selected">You selected ${number} out of 5</p>`
     document.getElementById("message").innerHTML = message;
 };   
