@@ -11,18 +11,35 @@
 </head>
 <body>
 
-  Day
-  DD
+  <div class="card">
+    <form action="" class="card-form" id="dateForm">
+      <div class="card-form__inputs-container">
+        <div class="card-form__input-div">
+          <label class="card-form__label" for="day">Day</label>
+          <input class="card-form__input" type="number" name="day" id="day" placeholder="DD" min="1" max="31" step="1" required>
+        </div>
 
-  Month
-  MM
+        <div class="card-form__input-div">
+          <label class="card-form__label" for="month">Month</label>
+          <input class="card-form__input" type="number" name="month" id="month" placeholder="MM" min="1" max="12" step="1" required>
+        </div>
 
-  Year
-  YYYY
+        <div class="card-form__input-div">
+          <label class="card-form__label" for="year">Year</label>
+          <input class="card-form__input" type="number" name="year" id="year" placeholder="YYYY" min="1900" max="2023" step="1" required>
+        </div>
+      </div>
 
-  -- years
-  -- months
-  -- days
+      <div class="card-form__divider"></div>
+      <button class="card-form__button" id="formButton" type="submit"><img src="./assets/images/icon-arrow.svg" alt="arrow down"></button>
+    </form>
+    
+    <div class="card-results">
+      <p class="card-results__p">-- years</p>
+      <p class="card-results__p">-- months</p>
+      <p class="card-results__p">-- days</p>
+    </div>
+  </div>
 
 </body>
 </html>
