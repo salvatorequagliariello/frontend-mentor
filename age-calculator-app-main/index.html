@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/desktop.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -30,14 +37,14 @@
         </div>
       </div>
 
-      <div class="card-form__divider"></div>
-      <button class="card-form__button" id="formButton" type="submit"><img src="./assets/images/icon-arrow.svg" alt="arrow down"></button>
-    </form>
+        <div class="card-form__divider"></div>
+        <button class="card-form__button" id="formButton" type="submit"><img src="./assets/images/icon-arrow.svg" alt="arrow down"></button>
+      </form>
     
     <div class="card-results">
-      <p class="card-results__p">-- years</p>
-      <p class="card-results__p">-- months</p>
-      <p class="card-results__p">-- days</p>
+      <p class="card-results__p"><span id="number-span">38</span> years</p>
+      <p class="card-results__p"><span id="number-span">9</span> months</p>
+      <p class="card-results__p"><span id="number-span">26</span> days</p>
     </div>
   </div>
 
