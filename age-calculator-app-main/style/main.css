@@ -139,3 +139,13 @@ body {
 .number-span {
     color: var(--primary-color-purple);
 }
+
+.error-message {
+    position: absolute;
+    top: 130px;
+    text-transform: none;
+    color: var(--primary-color-red);
+    font-size: 8px;
+    font-weight: 200;
+    font-style: italic;
+}
