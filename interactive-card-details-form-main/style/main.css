@@ -1,0 +1,97 @@
+:root {
+    --primary-color-red: hsl(0, 100%, 66%);
+    --neutral-color-white: hsl(0, 0%, 100%);
+    --neutral-color-violet-200: hsl(270, 3%, 87%);
+    --neutral-color-violet-400: hsl(279, 6%, 55%);
+    --neutral-color-violet-600: hsl(278, 68%, 11%);
+}
+
+.card-container {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.cards-container {
+    width: 100%;
+    height: 240px;
+
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.card-back {
+    position: absolute;
+    right: 15px;
+    top: 32px;
+
+    width: 286px;
+    height: 157px;
+    background-image: url(/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--neutral-color-white);
+}
+
+.card-back__cvc {
+    position: absolute;
+    right: 35px;
+    top: 69px;
+
+    font-size: 10px;
+}
+
+.card-front {
+    z-index: 3;
+    position: absolute;
+    left: 15px;
+    top: 125px;
+
+    width: 286px;
+    height: 157px;
+    background-image: url(/images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 20px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--neutral-color-white);
+}
+
+.card-front img {
+    height: 30px;
+}
+
+.card-front__main-number {
+    margin-top: 35px;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.card-front__info-container {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.form-container {
+    margin: 0 20px;
+    margin-top: 90px;
+}
+
+.card-form {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    
+}
