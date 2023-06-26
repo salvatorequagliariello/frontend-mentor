@@ -1,0 +1,75 @@
+:root {
+    --primary-color-cyan: hsl(193, 38%, 86%);
+    --primary-color-green: hsl(150, 100%, 66%);
+    --neutral-color-blue-200: hsl(217, 19%, 38%);
+    --neutral-color-blue-400: hsl(217, 19%, 24%);
+    --neutral-color-blue-600: hsl(218, 23%, 16%);
+}
+
+body {
+    background-color: #202632;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--neutral-color-blue-400);
+    width: 343px;
+    height: 317px;
+    padding-top: 43px;
+    border-radius: 10px;
+
+    font-family: 'Manrope', sans-serif;
+}
+
+.advice-id {
+    color: var(--primary-color-green);
+
+    font-size: 11px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.advice-text {
+    max-width: 80%;
+    margin-top: 35px;
+    color: var(--primary-color-cyan);
+
+    font-size: 22px;
+    text-align: center;
+}
+
+.card-divisor {
+    display: block;
+    position: absolute;
+    bottom: 61px;
+}
+.card-divisor-desktop {
+    display: none;
+}
+
+button  {
+    position: absolute;
+    bottom: -30px;
+
+    border: none;
+    outline: none;
+    padding: 20px;
+
+    background-color: var(--primary-color-green);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+}
+
+button:hover {
+    box-shadow: 0px 0px 14px var(--primary-color-green);
+}
