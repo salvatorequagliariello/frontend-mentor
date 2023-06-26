@@ -1,0 +1,34 @@
+@media screen and (min-width: 570px) {
+    .card {
+        width: 540px;
+        height: 333px;
+        border-radius: 15px;
+    }
+
+    .advice-id {
+        color: var(--primary-color-green);
+    
+        font-size: 14px;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+    
+    .advice-text {
+        max-width: 80%;
+        margin-top: 25px;
+        color: var(--primary-color-cyan);
+    
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .card-divisor {
+        display: none;
+    }
+    
+    .card-divisor-desktop {
+        display: block;
+        position: absolute;
+        bottom: 72px;
+    }
+}

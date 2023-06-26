@@ -3,7 +3,7 @@ async function getAdvice() {
     const data = await response.json();
     const {id, advice} = data.slip; 
 
-    if (advice.length > 70) {
+    if (advice.length > 50) {
         response = await fetch("https://api.adviceslip.com/advice");
     };
 
