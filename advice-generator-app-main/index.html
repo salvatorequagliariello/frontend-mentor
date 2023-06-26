@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/desktop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Advice generator app</title>
 
@@ -12,13 +18,13 @@
 <body>
 
   <article class="card">
-    <p class="advice-id" id="advice-id">Advice #</p> 
+    <p class="advice-id">Advice #<span id="advice-id"></span></p>
     <p class="advice-text" id="advice-text"></p>
-    <img src="./images/pattern-divider-mobile.svg" alt="divisor">
+    <img src="./images/pattern-divider-mobile.svg" alt="divisor" class="card-divisor">
+    <button><img src="./images/icon-dice.svg" alt="" onclick="getAdvice();"></button>
   </article>
   
   <script src="./script.js"></script>
 
-  <button><img src="./images/icon-dice.svg" alt=""></button>
 </body>
 </html>
