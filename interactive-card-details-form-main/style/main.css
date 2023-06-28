@@ -1,0 +1,261 @@
+:root {
+    --primary-color-red: hsl(0, 100%, 66%);
+    --neutral-color-white: hsl(0, 0%, 100%);
+    --neutral-color-violet-200: hsl(270, 3%, 87%);
+    --neutral-color-violet-400: hsl(279, 6%, 55%);
+    --neutral-color-violet-600: hsl(278, 68%, 11%);
+}
+
+.background-mobile {
+    z-index: -10;
+    position: absolute;
+    width: 100vw;
+    height: 240px;
+    background-color: #210930;
+}
+
+.project-container {
+    width: 375px;
+    margin: 0 auto;
+}
+
+.card-container {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.cards-container {
+    width: 100%;
+    height: 240px;
+
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.card-back {
+    position: relative;
+    left: 70px;
+    top: 32px;
+
+    width: 286px;
+    height: 157px;
+    background-image: url(/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--neutral-color-white);
+}
+
+
+.card-back__cvc {
+    width: max-content;
+    position: relative;
+    right: -230px;
+    top: 69px;
+
+    font-size: 10px;
+}
+
+
+.card-front {
+    z-index: 3;
+    position: relative;
+    left: 15px;
+    bottom: 37px;
+
+    width: 286px;
+    height: 157px;
+    background-image: url(/images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 20px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--neutral-color-white);
+}
+
+.card-front img {
+    height: 30px;
+} 
+
+.card-front__main-number {
+    margin-top: 35px;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.card-front__info-container {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.form-container {
+    display: flex;
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.card-form {
+    font-family: 'Space Grotesk', sans-serif;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+
+    margin-top: 7px;
+}
+
+input:focus {
+    border: 1.5px solid #422257;
+    outline: none;
+}
+
+input::placeholder {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    opacity: 0.4;
+    align-self: center;
+}
+
+label {
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+.input-container {
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-text-input {
+    padding-left: 15px;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #d2cfd2;
+}
+
+.input-date-container {
+    display: flex;
+    align-items:center;
+    gap: 13px;
+}
+
+.input-date {
+    flex: 1;
+    position: relative;
+}
+
+.input-date-flex {
+    display: flex;
+    gap: 9px;
+}
+
+.input-date-flex input {
+    width: 70px;
+}
+
+.form-button {
+    margin-top: 10px;
+    padding: 14px 0;
+
+    background-color: var(--neutral-color-violet-600);
+    border: none;
+    border-radius: 7px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--neutral-color-white);
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #480c6d;
+}
+
+.form-button:active {
+    background-color: var(--neutral-color-violet-400);
+    color: var(--neutral-color-violet-600);
+}
+
+.cvc {
+    width: 165px;
+}
+
+.error-message {
+    text-transform: none;
+    position: absolute;
+    top: 70px;
+
+    font-size: 10px;
+    color: var(--primary-color-red);
+}
+
+.date-error {
+    top: 77px;
+}
+
+.success-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 24px 0 24px;
+
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.success-section img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.success-title {
+    letter-spacing: 4px;
+    color: var(--neutral-color-violet-600);
+    margin-top: 43px;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.success-p {
+    color: var(--neutral-color-violet-400);
+    margin-top: 17px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.success-button {
+    margin-top: 40px;
+    padding: 14px 0;
+    width: 100%;
+
+    background-color: var(--neutral-color-violet-600);
+    border: none;
+    border-radius: 7px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--neutral-color-white);
+    cursor: pointer;
+}
