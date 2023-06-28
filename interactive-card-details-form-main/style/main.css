@@ -6,6 +6,14 @@
     --neutral-color-violet-600: hsl(278, 68%, 11%);
 }
 
+.background-mobile {
+    z-index: -10;
+    position: absolute;
+    width: 100vw;
+    height: 240px;
+    background-color: #210930;
+}
+
 .project-container {
     width: 375px;
     margin: 0 auto;
@@ -41,13 +49,16 @@
     color: var(--neutral-color-white);
 }
 
+
 .card-back__cvc {
+    width: max-content;
     position: relative;
-    left: 230px;
+    right: -230px;
     top: 69px;
 
     font-size: 10px;
 }
+
 
 .card-front {
     z-index: 3;
@@ -69,7 +80,7 @@
 
 .card-front img {
     height: 30px;
-}
+} 
 
 .card-front__main-number {
     margin-top: 35px;
@@ -104,8 +115,15 @@
 }
 
 input {
-    padding-top: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+
     margin-top: 7px;
+}
+
+input:focus {
+    border: 1.5px solid #422257;
+    outline: none;
 }
 
 input::placeholder {
@@ -113,7 +131,6 @@ input::placeholder {
     font-size: 18px;
     opacity: 0.4;
     align-self: center;
-    line-height: 36px;
 }
 
 label {
@@ -124,6 +141,7 @@ label {
 
 
 .input-container {
+    position: relative;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -144,6 +162,7 @@ label {
 
 .input-date {
     flex: 1;
+    position: relative;
 }
 
 .input-date-flex {
@@ -166,5 +185,22 @@ label {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
     color: var(--neutral-color-white);
+}
+
+.cvc {
+    width: 165px;
+}
+
+.error-message {
+    text-transform: none;
+    position: absolute;
+    top: 70px;
+
+    font-size: 10px;
+    color: var(--primary-color-red);
+}
+
+.date-error {
+    top: 77px;
 }
 
