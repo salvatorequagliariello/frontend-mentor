@@ -10,7 +10,6 @@ const number = document.getElementById("formNumber");
 const month = document.getElementById("formMonth");
 const year = document.getElementById("formYear");
 const cvc = document.getElementById("formCvc");
-const button = document.getElementById("submitButton");
 
 const validationObj = {
     username: false,
@@ -19,52 +18,71 @@ const validationObj = {
     year: false,
     cvc: false,
 }
-const validation = Object.values(validationObj).every(item => item === true);
 
-if (validation) {
-    button.disabled = true;
-} else {
-    button.disabled = false;
-};
+if (Object.values(validationObj).every(Boolean)) {
+    document.getElementById("submitButton").removeAttribute('disabled');
+}
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const error = inputControl.querySelector(".error-message");
-
+    
     error.innerText = message;
 };
 
 const setSucces = element => {
     const inputControl = element.parentElement;
     const error = inputControl.querySelector(".error-message");
-
+    
     error.innerText = "";
 }
 
 form.addEventListener("submit", e => {
     e.preventDefault();
-
-    
+    if (Object.values(validationObj).every(Boolean)) {
+            document.getElementById("form-container").style.display = "none";
+            document.getElementById("success-section").style.display = "flex";
+    }
 });
 
 username.addEventListener("input", e => {
     cardName.innerText = username.value;
+
+    if (username.value == "") {
+        cardName.innerText = "Jane Appleseed"
+    };
 })
 
 number.addEventListener("input", e => {
     cardNumber.innerText = number.value;
+
+    if (number.value == "") {
+        cardNumber.innerText = "0000 0000 0000 0000";
+    };
 })
 
 month.addEventListener("input", e => {
     cardDate.innerText = `${month.value}/${year.value}`;
+
+    if (month.value == "") {
+        cardDate.innerText = `00/${year.value}`;
+    };
 })
 
 year.addEventListener("input", e => {
     cardDate.innerText = `${month.value}/${year.value}`;
+
+    if (year.value == "") {
+        cardDate.innerText = `${month.value}/00`;
+    };
 })
 
 cvc.addEventListener("input", e => {
     cardCvc.innerText = cvc.value;
+
+    if (cvc.value == "") {
+        cardCvc.innerText = `000`;
+    };
 })
 
 username.addEventListener("blur", e => {
@@ -155,3 +173,5 @@ cvc.addEventListener("blur", e => {
         validationObj.cvc = true;
     }
 })
+
+    console.log(validationObj);

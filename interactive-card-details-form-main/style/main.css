@@ -100,6 +100,7 @@
 }
 
 .form-container {
+    display: flex;
     width: 330px;
     margin: 0 auto;
     margin-top: 90px;
@@ -185,6 +186,16 @@ label {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
     color: var(--neutral-color-white);
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #480c6d;
+}
+
+.form-button:active {
+    background-color: var(--neutral-color-violet-400);
+    color: var(--neutral-color-violet-600);
 }
 
 .cvc {
@@ -204,3 +215,47 @@ label {
     top: 77px;
 }
 
+.success-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 24px 0 24px;
+
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.success-section img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.success-title {
+    letter-spacing: 4px;
+    color: var(--neutral-color-violet-600);
+    margin-top: 43px;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.success-p {
+    color: var(--neutral-color-violet-400);
+    margin-top: 17px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.success-button {
+    margin-top: 40px;
+    padding: 14px 0;
+    width: 100%;
+
+    background-color: var(--neutral-color-violet-600);
+    border: none;
+    border-radius: 7px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--neutral-color-white);
+    cursor: pointer;
+}
