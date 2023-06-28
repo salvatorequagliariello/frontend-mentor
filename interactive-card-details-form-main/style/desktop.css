@@ -1,0 +1,114 @@
+@media screen and (min-width: 1200px) {
+    .background-mobile {
+        display: none;
+    }
+
+    .project-container {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .cards-container {
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url(/images/bg-main-desktop.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .card-back {
+        left: 258px;
+        top: 469px;
+    
+        width: 447px;
+        height: 245px;
+        background-image: url(/images/bg-card-back.png);
+    }
+
+    .card-back__cvc {
+        position: relative;
+        left: 362px;
+        top: 110px;
+    
+        font-size: 14px;
+    }
+
+    .card-front {
+        z-index: 3;
+        position: relative;
+        bottom: 58px;
+        left: 164px;
+    
+        width: 447px;
+        height: 245px;
+        padding: 30px;
+    }
+
+    .card-front img {
+        width: 85;
+        height: 47px;
+    }
+
+    .card-front__main-number {
+        margin-top: 58px;
+    
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    
+    .card-front__info-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+
+    .form-container {
+        position: absolute;
+        display: flex;
+        left: 832px;
+        top: 277px;
+        width: 380px;
+        height: 351px;
+        margin-top: 0;
+    }
+
+    .input-date-container {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        gap: 20px;
+    }
+
+    .input-date {
+        flex: auto;
+        position: relative;
+
+    }
+    
+    .input-date-flex {
+        display: flex;
+        flex: 1;
+        gap: 10px;
+    }
+    
+    .input-date-flex input {
+        width: 80px;
+    }
+
+    .cvc {
+        width: 100%;
+    }
+
+    .form-button {
+        margin-top: 15px;
+    }
+}
