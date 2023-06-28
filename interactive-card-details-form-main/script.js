@@ -1,10 +1,16 @@
 
+const cardName =  document.getElementById("cardName");
+const cardNumber = document.getElementById("cardNumber");
+const cardDate = document.getElementById("cardDate");
+const cardCvc  = document.getElementById("cardCvc");
+
 const form = document.getElementById("form");
 const username = document.getElementById("formName");
 const number = document.getElementById("formNumber");
 const month = document.getElementById("formMonth");
 const year = document.getElementById("formYear");
 const cvc = document.getElementById("formCvc");
+const button = document.getElementById("submitButton");
 
 const validationObj = {
     username: false,
@@ -13,6 +19,13 @@ const validationObj = {
     year: false,
     cvc: false,
 }
+const validation = Object.values(validationObj).every(item => item === true);
+
+if (validation) {
+    button.disabled = true;
+} else {
+    button.disabled = false;
+};
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -34,6 +47,25 @@ form.addEventListener("submit", e => {
     
 });
 
+username.addEventListener("input", e => {
+    cardName.innerText = username.value;
+})
+
+number.addEventListener("input", e => {
+    cardNumber.innerText = number.value;
+})
+
+month.addEventListener("input", e => {
+    cardDate.innerText = `${month.value}/${year.value}`;
+})
+
+year.addEventListener("input", e => {
+    cardDate.innerText = `${month.value}/${year.value}`;
+})
+
+cvc.addEventListener("input", e => {
+    cardCvc.innerText = cvc.value;
+})
 
 username.addEventListener("blur", e => {
     const re = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
@@ -83,6 +115,7 @@ year.addEventListener("blur", e => {
     } else {
         setSucces(document.getElementById("input-date"));
         validationObj.year = true;
+        validationObj.month = true;
     }
 })
 
@@ -101,6 +134,7 @@ month.addEventListener("blur", e => {
     } else {
         setSucces(document.getElementById("input-date"));
         validationObj.month = true;
+        validationObj.year = true;
     }
 });
 
