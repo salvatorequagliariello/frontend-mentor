@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/desktop.css">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Time tracking dashboard</title>
 
 </head>
@@ -27,12 +34,10 @@
       </div>
     </article>
     
-    <article  class="card work" id="workCard">
-      <div class="card-top">
-        <img src="./images/icon-work.svg" alt="">
-      </div>
+    <article  class="card work"" id="workCard">
+      <div class="card-top"></div>
       <div class="card-info">
-        <div>
+        <div class="card-info__category">
           <h4>Work</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
@@ -42,11 +47,9 @@
     </article>
 
     <article  class="card play" id="playCard">
-      <div class="card-top">
-        <img src="./images/icon-play.svg" alt="">
-      </div>
+      <div class="card-top"></div>
       <div class="card-info">
-        <div>
+        <div class="card-info__category">
           <h4>Play</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
@@ -56,11 +59,9 @@
     </article>
 
     <article  class="card study" id="studyCard">
-      <div class="card-top">
-        <img src="./images/icon-study.svg" alt="">
-      </div>
+      <div class="card-top"></div>
       <div class="card-info">
-        <div>
+        <div class="card-info__category">
           <h4>Study</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
@@ -70,11 +71,9 @@
     </article>
 
     <article  class="card exercise" id="exerciseCard">
-      <div class="card-top">
-        <img src="./images/icon-exercise.svg" alt="">
-      </div>
+      <div class="card-top"> </div>
       <div class="card-info">
-        <div>
+        <div class="card-info__category">
           <h4>Exercise</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
@@ -84,11 +83,9 @@
     </article>
 
     <article  class="card social" id="socialCard">
-      <div class="card-top">
-        <img src="./images/icon-social.svg" alt="">
-      </div>
+      <div class="card-top"></div>
       <div class="card-info">
-        <div>
+        <div class="card-info__category">
           <h4>Social</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
@@ -98,11 +95,9 @@
     </article>
 
     <article  class="card self-care" id="selfCareCard">
-      <div class="card-top">
-        <img src="./images/icon-self-care.svg" alt="">
-      </div>
+      <div class="card-top"></div>
       <div class="card-info">
-        <div>
+        <div class="card-info__category">
           <h4>Self Care</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
@@ -110,7 +105,7 @@
         <p>Last <span>Week</span> - 2hrs</p>
       </div>
     </article>
-    
+
   </section>
     
 </body>

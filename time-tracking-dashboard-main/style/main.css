@@ -1,0 +1,195 @@
+:root {
+    --primary-color-blue: hsl(246, 80%, 60%);
+    --primary-color-work: hsl(15, 100%, 70%);
+    --primary-color-play: hsl(195, 74%, 62%);
+    --primary-color-study: hsl(348, 100%, 68%);
+    --primary-color-exercise: hsl(145, 58%, 55%);
+    --primary-color-social: hsl(264, 64%, 52%);
+    --primary-color-self-care: hsl(43, 84%, 65%);
+    
+    --neutral-color-blue-800: hsl(226, 43%, 10%);
+    --neutral-color-blue-600: hsl(235, 46%, 20%);
+    --neutral-color-blue-400: hsl(235, 45%, 61%);
+    --neutral-color-blue-200: hsl(236, 100%, 87%);
+
+    --primary-font: 'Rubik', sans-serif;
+}
+
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: repeat(2, 244px);
+    grid-gap: 30px;
+    place-content: center;
+    place-items: center;
+    
+    background-color: var(--neutral-color-blue-800);
+    font-family: var(--primary-font);
+}
+
+.main-card {
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    background-color: var(--neutral-color-blue-600);
+    border-radius: 15px;
+}
+
+.main-card__user {
+    width: 100%;
+    height: 354px;
+    padding: 35px 29px;
+    border-radius: 15px;
+
+    color: white;
+    background-color: var(--primary-color-blue);
+}
+
+.main-card__user img {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    border-radius: 100%;
+
+    border: 3px solid white;
+}
+
+.main-card__user p {
+    margin-top: 43px;
+
+    color: var(--neutral-color-blue-200);
+}
+
+.main-card__user h1 {
+    line-height: 45px;
+
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+}
+
+.main-card__selector {
+    padding-top: 29px;
+    padding-left: 29px;
+}
+
+.main-card__selector button {
+    display: block;
+    margin-bottom: 18px;
+    background: none;
+    border: none;
+    
+    opacity: 0.6;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    color: var(--neutral-color-blue-200);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.main-card__selector button:hover {
+    color: white;
+    opacity: 1;
+}
+
+.card {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.card-top {
+    height: 45px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.card-info {
+    width: 100%;
+    height: 199px;
+    padding: 30px;
+
+    border-radius: 10px;
+    background-color: var(--neutral-color-blue-600);
+    color: white;
+}
+
+.card-info__category {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card-info__category img {
+    width: 18px;
+    height: 7px;
+    object-fit: contain;
+
+    cursor: pointer;
+}
+
+.card-info h1 {
+    margin: 30px 0 15px 0;
+
+    line-height: 50px;
+    font-size: 56px;
+    font-weight: 300;
+}
+
+.card-info p {
+    color: var(--neutral-color-blue-200);
+    font-size: 15px;
+}
+
+.card.work {
+    background-color: var(--primary-color-work);
+    background-image: url("/images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+
+.card.play {
+    background-color: var(--primary-color-play);
+    background-image: url("/images/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+
+.card.study {
+    background-color: var(--primary-color-study);
+    background-image: url("/images/icon-study.svg");
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+
+.card.exercise {
+    background-color: var(--primary-color-exercise);
+    background-image: url("/images/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 15px;
+}
+
+.card.social {
+    background-color: var(--primary-color-social);
+    background-image: url("/images/icon-social.svg");
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+
+.card.self-care {
+    background-color: var(--primary-color-self-care);
+    background-image: url("/images/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
