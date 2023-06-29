@@ -28,9 +28,9 @@
       </div>
       
       <div class="main-card__selector">
-        <button>Daily</button>
-        <button>Weekly</button>
-        <button>Monthly</button>
+        <button id="dailyButton">Daily</button>
+        <button id="weeklyButton">Weekly</button>
+        <button id="monthlyButton">Monthly</button>
       </div>
     </article>
     
@@ -38,11 +38,11 @@
       <div class="card-top"></div>
       <div class="card-info">
         <div class="card-info__category">
-          <h4>Work</h4>
+          <h4 class="category-name">Work</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
-        <h1>32hrs</h1>
-        <p>Last <span>Week</span> - 36hrs</p>
+        <h1><span class="current">32</span>hrs</h1>
+        <p>Last <span class="time">Week</span> - <span class="previous">36</span>hrs</p>
       </div>
     </article>
 
@@ -50,11 +50,11 @@
       <div class="card-top"></div>
       <div class="card-info">
         <div class="card-info__category">
-          <h4>Play</h4>
+          <h4 class="category-name">Play</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
-        <h1>10hrs</h1>
-        <p>Last <span>Week</span> - 8hrs</p>
+        <h1><span class="current">10</span>hrs</h1>
+        <p>Last <span class="time">Week</span> - <span class="previous">8</span>hrs</p>
       </div>
     </article>
 
@@ -62,11 +62,11 @@
       <div class="card-top"></div>
       <div class="card-info">
         <div class="card-info__category">
-          <h4>Study</h4>
+          <h4 class="category-name">Study</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
-        <h1>4hrs</h1>
-        <p>Last <span>Week</span> - 7hrs</p>
+        <h1><span class="current">4</span>hrs</h1>
+        <p>Last <span class="time">Week</span> - <span class="previous">7</span>hrs</p>
       </div>
     </article>
 
@@ -74,11 +74,11 @@
       <div class="card-top"> </div>
       <div class="card-info">
         <div class="card-info__category">
-          <h4>Exercise</h4>
+          <h4 class="category-name">Exercise</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
-        <h1>4hrs</h1>
-        <p>Last <span>Week</span> - 5hrs</p>
+        <h1><span class="current">4</span>hrs</h1>
+        <p>Last <span class="time">Week</span> - <span class="previous">5</span>hrs</p>
       </div>
     </article>
 
@@ -86,27 +86,28 @@
       <div class="card-top"></div>
       <div class="card-info">
         <div class="card-info__category">
-          <h4>Social</h4>
+          <h4 class="category-name">Social</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
-        <h1>5hrs</h1>
-        <p>Last <span>Week</span> - 10hrs</p>
+        <h1><span class="current">5</span>hrs</h1>
+        <p>Last <span class="time">Week</span> - <span class="previous">10</span>hrs</p>
       </div>
     </article>
 
-    <article  class="card self-care" id="selfCareCard">
+    <article class="card self-care" id="self-careCard">
       <div class="card-top"></div>
       <div class="card-info">
         <div class="card-info__category">
-          <h4>Self Care</h4>
+          <h4 class="category-name">Self Care</h4>
           <img src="./images/icon-ellipsis.svg" alt="">
         </div>
-        <h1>2hrs</h1>
-        <p>Last <span>Week</span> - 2hrs</p>
+        <h1><span class="current">2</span>hrs</h1>
+        <p>Last <span class="time">Week</span> - <span class="previous">2</span>hrs</p>
       </div>
     </article>
 
   </section>
-    
+  
+  <script type="module" src="./script.js" defer></script>
 </body>
 </html>
