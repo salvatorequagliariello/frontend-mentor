@@ -8,73 +8,110 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Report for
-  Jeremy Robson
+  <section class="grid-container">
 
-  Daily
-  Weekly
-  Monthly
+    <article class="main-card">
+      <div class="main-card__user">
+        <img src="./images/image-jeremy.png" alt="image of jeremy">
+        <p>Report for</p>
+        <h1>Jeremy Robson</h1>
+      </div>
+      
+      <div class="main-card__selector">
+        <button>Daily</button>
+        <button>Weekly</button>
+        <button>Monthly</button>
+      </div>
+    </article>
+    
+    <article  class="card work" id="workCard">
+      <div class="card-top">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+      <div class="card-info">
+        <div>
+          <h4>Work</h4>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <h1>32hrs</h1>
+        <p>Last <span>Week</span> - 36hrs</p>
+      </div>
+    </article>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <article  class="card play" id="playCard">
+      <div class="card-top">
+        <img src="./images/icon-play.svg" alt="">
+      </div>
+      <div class="card-info">
+        <div>
+          <h4>Play</h4>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <h1>10hrs</h1>
+        <p>Last <span>Week</span> - 8hrs</p>
+      </div>
+    </article>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <article  class="card study" id="studyCard">
+      <div class="card-top">
+        <img src="./images/icon-study.svg" alt="">
+      </div>
+      <div class="card-info">
+        <div>
+          <h4>Study</h4>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <h1>4hrs</h1>
+        <p>Last <span>Week</span> - 7hrs</p>
+      </div>
+    </article>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <article  class="card exercise" id="exerciseCard">
+      <div class="card-top">
+        <img src="./images/icon-exercise.svg" alt="">
+      </div>
+      <div class="card-info">
+        <div>
+          <h4>Exercise</h4>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <h1>4hrs</h1>
+        <p>Last <span>Week</span> - 5hrs</p>
+      </div>
+    </article>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <article  class="card social" id="socialCard">
+      <div class="card-top">
+        <img src="./images/icon-social.svg" alt="">
+      </div>
+      <div class="card-info">
+        <div>
+          <h4>Social</h4>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <h1>5hrs</h1>
+        <p>Last <span>Week</span> - 10hrs</p>
+      </div>
+    </article>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <article  class="card self-care" id="selfCareCard">
+      <div class="card-top">
+        <img src="./images/icon-self-care.svg" alt="">
+      </div>
+      <div class="card-info">
+        <div>
+          <h4>Self Care</h4>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <h1>2hrs</h1>
+        <p>Last <span>Week</span> - 2hrs</p>
+      </div>
+    </article>
+    
+  </section>
+    
 </body>
 </html>
