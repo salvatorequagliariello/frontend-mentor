@@ -4,47 +4,34 @@ const day = document.getElementById("dailyButton");
 const week = document.getElementById("weeklyButton");
 const month = document.getElementById("monthlyButton");
 
-
-function changeTimes(time) {
-    const categories = ["work", "play", "study", "exercise", "social", "self-care"];
-    let timelapse;
-    
-    if (time === "day") {
-        timelapse = "daily";
-    } else if (time === "week") {
-        timelapse = "weekly";
-    } else {
-        timelapse = "monthly";
-    };
-
-    for (const category of categories) {
-        const categoryDiv = document.getElementById(`${category}Card`)
+function changeTimes(timelapse) {
+    for (const category of data) {
+        const categoryDiv = document.getElementById(`${category.title.toLowerCase()}Card`)
         const current = categoryDiv.querySelector("span.current");
         const previous = categoryDiv.querySelector("span.previous");
         const time = categoryDiv.querySelector(".time");
-        time.innerHTML = time.toString(); 
 
-            for (const title of data) {
-                const cat = title.timeframes[timelapse];
-                current.innerHTML = cat.current;
-                previous.innerHTML = cat.previous;
-            }
-            console.log(current.innerHTML)
+        if (timelapse == "daily") {
+            time.innerHTML = "Day";
+        } else if (timelapse == "weekly") {
+            time.innerHTML = "Week";
+        } else { 
+            time.innerHTML = "Monthly";
+        };
+
+        current.innerHTML = category.timeframes[timelapse]["current"];
+        previous.innerHTML = category.timeframes[timelapse].previous;
     };
 };
 
-
 day.addEventListener("click", e => {
-    changeTimes("day");
+    changeTimes("daily");
 });
 
 week.addEventListener("click", e => {
-    changeTimes("week");
+    changeTimes("weekly");
 });
 
 month.addEventListener("click", e => {
-    changeTimes("month");
+    changeTimes("monthly");
 });
-
-
-changeTimes();
