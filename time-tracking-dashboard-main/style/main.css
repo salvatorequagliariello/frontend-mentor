@@ -16,6 +16,10 @@
 }
 
 
+body {
+    background-color: var(--neutral-color-blue-800);
+}
+
 .grid-container {
     width: 100vw;
     height: 100vh;
@@ -95,6 +99,11 @@
 
 .main-card__selector button:hover {
     color: white;
+    opacity: 1;
+}
+
+.active {
+    color: green;
     opacity: 1;
 }
 

@@ -4,47 +4,71 @@ const day = document.getElementById("dailyButton");
 const week = document.getElementById("weeklyButton");
 const month = document.getElementById("monthlyButton");
 
-
-function changeTimes(time) {
-    const categories = ["work", "play", "study", "exercise", "social", "self-care"];
-    let timelapse;
-    
-    if (time === "day") {
-        timelapse = "daily";
-    } else if (time === "week") {
-        timelapse = "weekly";
-    } else {
-        timelapse = "monthly";
-    };
-
-    for (const category of categories) {
-        const categoryDiv = document.getElementById(`${category}Card`)
+function changeTimes(timelapse) {
+    for (const category of data) {
+        const categoryDiv = document.getElementById(`${category.title.toLowerCase()}Card`)
         const current = categoryDiv.querySelector("span.current");
         const previous = categoryDiv.querySelector("span.previous");
         const time = categoryDiv.querySelector(".time");
-        time.innerHTML = time.toString(); 
 
-            for (const title of data) {
-                const cat = title.timeframes[timelapse];
-                current.innerHTML = cat.current;
-                previous.innerHTML = cat.previous;
-            }
-            console.log(current.innerHTML)
+        if (timelapse == "daily") {
+            time.innerHTML = "Day";
+        } else if (timelapse == "weekly") {
+            time.innerHTML = "Week";
+        } else { 
+            time.innerHTML = "Monthly";
+        };
+
+        current.innerHTML = category.timeframes[timelapse]["current"];
+        previous.innerHTML = category.timeframes[timelapse].previous;
     };
 };
 
-
 day.addEventListener("click", e => {
-    changeTimes("day");
+    changeTimes("daily");
+    
+    day.style.color = "white";
+    day.style.opacity = "1";
+
+    week.style.color = "var(--neutral-color-blue-200)";
+    week.style.opacity = "0.6";
+
+    month.style.color = "var(--neutral-color-blue-200)";
+    month.style.opacity = "0.6";
 });
 
 week.addEventListener("click", e => {
-    changeTimes("week");
+    changeTimes("weekly");
+
+    day.style.color = "var(--neutral-color-blue-200)";
+    day.style.opacity = "0.6";
+
+    week.style.color = "white";
+    week.style.opacity = "1";
+
+    month.style.color = "var(--neutral-color-blue-200)";
+    month.style.opacity = "0.6";
 });
 
 month.addEventListener("click", e => {
-    changeTimes("month");
+    changeTimes("monthly");
+
+    day.style.color = "var(--neutral-color-blue-200)";
+    day.style.opacity = "0.6";
+
+    week.style.color = "var(--neutral-color-blue-200)";
+    week.style.opacity = "0.6";
+
+    month.style.color = "white";
+    month.style.opacity = "1";
 });
 
+changeTimes("weekly");
+day.style.color = "var(--neutral-color-blue-200)";
+day.style.opacity = "0.6";
 
-changeTimes();
+week.style.color = "white";
+week.style.opacity = "1";
+
+month.style.color = "var(--neutral-color-blue-200)";
+month.style.opacity = "0.6";
