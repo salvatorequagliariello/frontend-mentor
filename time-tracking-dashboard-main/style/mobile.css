@@ -1,0 +1,117 @@
+
+@media screen and (max-width: 768px) and (min-width: 100px) {
+
+    .grid-container {
+        margin-top: 80px;
+        height: 100%;
+        width: 100%;
+
+        place-content: center;
+        place-items: center;
+
+        grid-template-columns: 327px;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+    }
+
+    .main-card {
+        height: 205px;
+        width: 100%;
+    }
+
+    .main-card__user {
+        position: relative;
+        width: 100%;
+        height: 133px;
+
+        display: flex;
+        align-items: top;
+        justify-content: flex-start;
+        gap: 15px;
+
+        padding: 32px 29px 0 29px;
+        border-radius: 15px;
+    }
+
+    .main-card__user img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: 100%;
+    
+        border: 3px solid white;
+    }
+    
+    .main-card__user p {
+        margin-top: 10px;
+    }
+    
+    .main-card__user h1 {
+        line-height: 24px;
+        font-size: 23px;
+    }
+
+    .main-card__selector {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        padding: 24px 0;
+    }
+
+    .card {
+        height: 160px;
+        width: 100%;
+    }
+
+    .card-top {
+        height: 38px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .card-info {
+        width: 100%;
+        height: 122px;
+        padding: 30px;
+    
+        border-radius: 10px;
+    }
+
+    .card-info h1 {
+        margin: 0;
+        line-height: 32px;
+        font-size: 32px;
+        font-weight: 300;
+    }
+    
+    .flex-time {
+        margin: 5px 0 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1075px)and (min-width: 768px)  {
+    .grid-container {
+        margin: 80px 0;
+        height: 100%;
+        width: 100%;
+
+        grid-template-columns: repeat(2, 327px);
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 1075px) {
+    .grid-container {
+        margin: 80px 0;
+        height: 100%;
+        width: 100%;
+
+        grid-template-columns: repeat(3, 327px);
+        grid-template-rows: auto;
+    }
+}

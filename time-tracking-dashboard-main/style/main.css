@@ -16,6 +16,10 @@
 }
 
 
+body {
+    background-color: var(--neutral-color-blue-800);
+}
+
 .grid-container {
     width: 100vw;
     height: 100vh;
