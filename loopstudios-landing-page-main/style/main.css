@@ -1,0 +1,95 @@
+:root {
+    --primary-color-white: hsl(0, 0%, 100%);
+    --primary-color-black: hsl(0, 0%, 0%);
+    --primary-color-gray-600: hsl(0, 0%, 55%);
+    --primary-color-gray-800: hsl(0, 0%, 41%);
+
+    --font-alata: 'Alata', sans-serif;
+    --font-josefin: 'Josefin Sans', sans-serif;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: white;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    padding: 4rem 10.25rem;
+
+    font-family: var(--font-alata);
+}
+
+.header-container nav ul {
+    display: flex;
+    gap: 2rem;
+
+    color: white;
+    font-size: 0.96rem;
+}
+
+.hero-section {
+    width: 100%;
+    height: 40.625rem;
+    padding: 14.063rem 10.25rem;
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.hero-section h1 {
+    max-width: 40.75rem;
+    height: 17.5rem;
+    padding: 2.5rem;
+    border: 0.125rem solid var(--primary-color-white);
+
+    line-height: 0.97;
+    font-size: 4.5rem;
+    font-family: var(--font-josefin);
+    color: white;
+    text-transform: uppercase;
+}
+
+main {
+    padding: 10rem 10.3rem 0 10.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-section {
+    width: 100%;
+    height: 31.25rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.about-section img {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.about-section__info {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row: 3;
+
+    background-color: rgb(120, 2, 2);
+}
