@@ -35,9 +35,10 @@ button {
     align-items: center;
     text-align: center;
 
-    padding: 4rem 10.25rem;
+    padding: 4rem 10.25rem 1rem;
 
     font-family: var(--font-alata);
+    transition: all 0.3s;
 }
 
 .header-container nav ul {
