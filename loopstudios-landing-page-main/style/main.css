@@ -167,6 +167,10 @@ main {
     position: relative;
 }
 
+.project-container img {
+    object-fit:cover;
+}
+
 .fade {
     position: absolute;
     height: 100%;
@@ -190,4 +194,48 @@ main {
 
 .grid {
     margin-right: 10rem;
+}
+
+.footer-container {
+    padding-top: 2.75rem;
+    margin-top: 11.5rem;
+    width: 100%;
+    height: 10rem;
+
+    background-color: #000000;
+    font-family: var(--font-alata);
+    font-size: 0.95rem;
+}
+
+.footer-flex {
+    margin: 0 auto;
+    max-width: 69.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-flex ul {
+    display: flex;
+}
+
+.footer-logo {
+    width: 9rem;
+}
+
+.footer-social-container {
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-flex.lower {
+    margin-top: 1.6rem;
+}
+
+.footer-flex.lower ul {
+    gap: 2rem;
+}
+
+.footer-flex.lower p {
+    color: var(--primary-color-gray-600);
 }
