@@ -38,7 +38,7 @@ button {
     padding: 4rem 10.25rem 1rem;
 
     font-family: var(--font-alata);
-    transition: all 0.3s;
+    transition: background-color, padding-top 0.5s;
 }
 
 .header-container nav ul {
@@ -74,9 +74,9 @@ button {
 }
 
 main {
-    max-width: 69.625rem;
-    margin: 0 auto;
-    margin-top: 10rem;
+    margin: 10rem auto;
+    max-width: 77.5vw;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,7 +156,7 @@ main {
 
 .projects-section__grid-container {
     margin-top: 5rem;
-    height: 58.125rem;
+    max-height: 58.125rem;
 
     display: grid;
     grid-gap: 1.875rem;
@@ -169,7 +169,9 @@ main {
 }
 
 .project-container img {
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .fade {
@@ -210,7 +212,7 @@ main {
 
 .footer-flex {
     margin: 0 auto;
-    max-width: 69.625rem;
+    width: 77vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
