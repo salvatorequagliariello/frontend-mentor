@@ -243,7 +243,11 @@ main {
     color: var(--primary-color-gray-600);
 }
 
-.hambuerger-icon {
+.hamburger-icon-closed {
+    display: none;
+}
+
+.hamburger-icon-open {
     display: none;
 }
 

@@ -16,13 +16,22 @@
         width: 9rem;
     }
 
-    .hambuerger-icon {
+    .hamburger-icon-closed {
         display: inline;
         border: none;
         height: 24px;
         width: 24px;
-        background: url('/images/icon-hamburger.svg') no-repeat center;
         background-size: 100%;
+        background: url('/images/icon-hamburger.svg') no-repeat center;
+    }
+
+    .hamburger-icon-open {
+        display: inline;
+        border: none;
+        height: 24px;
+        width: 24px;
+        background-size: 100%;
+        background: url('/images/icon-close.svg') no-repeat center;
     }
 
     .hero-section {
