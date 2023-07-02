@@ -242,3 +242,15 @@ main {
 .footer-flex.lower p {
     color: var(--primary-color-gray-600);
 }
+
+.hamburger-icon-closed {
+    display: none;
+}
+
+.hamburger-icon-open {
+    display: none;
+}
+
+.hamburger-menu__container {
+    display: none;
+}
