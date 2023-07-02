@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
         header.style.paddingBottom = "1rem";
     } else if (window.scrollY < 70 && window.innerWidth < 800) {
         header.style.backgroundColor = "transparent";
-        header.style.padding = "2.5rem";
+        header.style.padding = "2.5rem 1.5rem";
     } 
 });
 
@@ -24,13 +24,12 @@ hamburgerButton.addEventListener("click", () => {
     if (hamburgerButton.classList.contains("hamburger-icon-closed")) {
         hamburgerButton.classList.remove("hamburger-icon-closed");
         hamburgerButton.classList.add("hamburger-icon-open");
-        console.log("apri");
+        
         hamburgerMenu.style.display = "block";
     } else  {
         hamburgerButton.classList.add("hamburger-icon-closed");
         hamburgerButton.classList.remove("hamburger-icon-open");
         
-        console.log("chiudi");
         hamburgerMenu.style.display = "none";
     }
 })
