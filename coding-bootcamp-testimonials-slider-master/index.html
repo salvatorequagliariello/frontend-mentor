@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="/style/reset.css">
+  <link rel="stylesheet" href="/style/main.css">
+  <link rel="stylesheet" href="/style/desktop.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+<body>
+
+  <div class="background-container">
+    <img class="pattern-bg" src="/images/pattern-bg.svg" alt="">
+    <img class="pattern-quotes" src="/images/pattern-quotes.svg" alt="">
+    <img class="pattern-curves" src="/images/pattern-curve.svg" alt="">
+  </div>
+  
+  
+  <article class="article-container active" id="articleContainerTanya">
+    <section class="img-container" id="imgContainer">
+      <img class="user-pic" src="/images/image-tanya.jpg" alt="">
+      <div class="button-container">
+        <button class="prevButton" id="prevOneButton"><img src="/images/icon-prev.svg" alt=""></button>
+        <button class="nextButton" id="nextOneButton"><img src="/images/icon-next.svg" alt=""></button>
+      </div>
+    </section>
+
+    <section class="text-container" id="textContainer">
+      <p class="text-paragraph__quote">
+        “ I’ve been interested in coding for a while but never taken the jump, until now. 
+        I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+        excited about the future. ”
+      </p>
+      
+      <p class="text-paragraph__name">
+        <span>Tanya Sinclair</span>
+        UX Engineer
+      </p>
+    </section>
+
+  </article>
+
+  <article class="article-container" id="articleContainerJohn">
+    <section class="img-container" id="imgContainer">
+      <img class="user-pic" src="/images/image-john.jpg" alt="">
+      <div class="button-container">
+        <button class="prevButton" id="prevButton"><img src="/images/icon-prev.svg" alt=""></button>
+        <button class="nextButton" id="nextButton"><img src="/images/icon-next.svg" alt=""></button>
+      </div>
+    </section>
+    <section class="text-container" id="textContainer">
+      <p class="text-paragraph__quote">
+        “ If you want to lay the best foundation possible I’d recommend taking this course. 
+        The depth the instructors go into is incredible. I now feel so confident about 
+        starting up as a professional developer. ”
+      </p>
+      
+      <p class="text-paragraph__name">
+        <span>John Tarkpor</span>
+        Junior Front-end Developer
+      </p>
+    </article>
+    </section>
+  <script type="module" src="/script.js" defer></script>
+</body>
+</html>

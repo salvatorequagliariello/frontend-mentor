@@ -1,0 +1,152 @@
+
+:root {
+    --primary-color-blue-100: hsl(240, 18%, 77%);
+    --primary-color-blue-800: hsl(240, 38%, 20%);
+
+    --font-inter: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.background-container {
+    position: absolute;
+    overflow: hidden;
+    padding: 1.5rem;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pattern-bg {
+    width: 20.5rem;
+    height: min-content;
+}
+
+.pattern-quotes {
+    margin-top: 2rem;
+    width: 3.76rem;
+}
+
+.pattern-curves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    height: 4.5rem;
+}
+
+.article-container {
+    padding-top: 3.5rem;
+    height: 100%;
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation: fade 0.3s;
+}
+
+@keyframes fade {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.active {
+    display: flex;
+}
+
+.img-container {
+    position: relative;
+}
+
+.user-pic {
+    width: 15.8rem;
+    height: 15.8rem;
+
+    border-radius: 5px;
+    box-shadow: 0 2rem 3rem -1rem hsla(240, 38%, 20%, 0.4);
+}
+
+.button-container {
+    position: absolute;
+    bottom: -1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0;
+    height: 2.5rem;
+    width: 5rem;
+    background-color: white;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 1.5rem;
+}
+
+.prevButton {
+    border: none;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    background-color: transparent
+}
+
+.nextButton {
+    border: none;
+    background-color: transparent;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    height: 2.5rem;
+}
+
+.button-container img {
+    width: 0.6rem;
+}
+
+#leftButton:hover {
+    cursor: pointer;
+    border-right: 2px solid #847F9E;
+}
+
+#rightButton:hover {
+    cursor: pointer;
+    border-left: 2px solid #847F9E;
+}
+
+.text-container {
+    margin-top: 5rem;
+    width: 19.5rem;
+
+    text-align: center;
+    font-family: var(--font-inter);
+    font-weight: 100;
+    font-size: 1.12rem;
+    line-height: 1.5rem;
+
+    color: var(--primary-color-blue-800);
+}
+
+.text-paragraph__name {
+    margin-top: 1rem;
+
+    font-size: 0.9rem;
+    color: var(--primary-color-blue-100);
+    line-height: 1.2rem;
+    font-weight: 500;
+}
+
+.text-paragraph__name span {
+    display: block;
+
+    color: var(--primary-color-blue-800);
+    font-size: 0.95rem;
+    font-weight: 700;
+}

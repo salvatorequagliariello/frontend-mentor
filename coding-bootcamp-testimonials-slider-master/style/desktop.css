@@ -1,0 +1,128 @@
+
+@media (min-width: 1340px) {
+    .background-container {
+        display: block !important;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .pattern-bg {
+        position: absolute;
+        right: 4.56rem;
+        top: 3.15rem;
+
+        width: 43.5rem !important;
+    }
+
+    .pattern-quotes {
+        position: absolute;
+        margin: 0 !important;
+        top: 13.36em;
+        left: 16.28rem;
+        width: 7.5rem !important;
+    }
+
+    .pattern-curves {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 42% !important;
+        height: 9.7rem !important;
+    }
+    
+    .article-container {
+        display: none;
+        width: 100vw !important;
+    }
+
+    .img-container {
+        position: absolute !important;
+        right: 10.3rem;
+        top: 7.1rem;
+
+        width: 33.7rem !important;
+    }
+
+    .user-pic {
+        width: 100% !important;
+        height: 100% !important;
+    
+        border-radius: 5px;
+        box-shadow: 0 1rem 5rem -10rem hsla(240, 38%, 20%, 0.1);
+    }
+
+    .john {
+        display: none !important;
+    }
+    
+    .button-container img {
+        width: 0.8rem !important;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: -1.8rem !important;
+        left: 7.4rem !important;
+    
+        height: 3.5rem !important;
+        width: 6.9rem !important;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.8rem !important;
+    
+        border: none;
+        background-color: white;
+        border-radius: 10rem !important; 
+    }
+    
+    .prevButton {
+        border: none;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        background-color: transparent
+    }
+    
+    .nextButton {
+        border: none;
+        background-color: transparent;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        height: 2.5rem;
+    }
+
+    .text-container {
+        margin: 0 !important;
+        width: 40rem !important;
+        position: absolute !important;
+        top: 17.3rem;
+        left: 10.3rem;
+    
+        text-align: left !important;
+        font-family: var(--font-inter);
+        font-weight: 100;
+        font-size: 2rem !important;
+        line-height: 1.4 !important; 
+    
+        color: var(--primary-color-blue-800);
+    }
+
+    .text-paragraph__name {
+    margin-top: 2.3rem !important;
+
+    font-size: 1.2rem !important;
+    color: var(--primary-color-blue-100);
+    line-height: 1.3rem;
+    font-weight: 500;
+    }
+
+    .text-paragraph__name span {
+        display: inline !important;
+    
+        color: var(--primary-color-blue-800);
+        font-size: 1.3rem !important;
+        font-weight: 700;
+    }
+}
