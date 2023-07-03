@@ -1,0 +1,37 @@
+
+@media (min-width: 1300px) {
+    .background-container {
+        display: block !important;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .pattern-bg {
+        position: absolute;
+        right: 4.56rem;
+        top: 3.15rem;
+
+        width: 43.5rem !important;
+    }
+
+    .pattern-quotes {
+        position: absolute;
+        margin: 0 !important;
+        top: 13.36em;
+        left: 16.28rem;
+        width: 7.5rem !important;
+    }
+
+    .pattern-curves {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 42% !important;
+        height: 9.7rem !important;
+    }
+    
+    .article-container {
+        display: none !important;
+    }
+}
