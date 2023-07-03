@@ -1,5 +1,5 @@
 
-@media (min-width: 1300px) {
+@media (min-width: 1340px) {
     .background-container {
         display: block !important;
         position: absolute;
@@ -32,7 +32,7 @@
     }
     
     .article-container {
-        display: block !important;
+        display: none;
         width: 100vw !important;
     }
 
@@ -55,8 +55,12 @@
     .john {
         display: none !important;
     }
+    
+    .button-container img {
+        width: 0.8rem !important;
+    }
 
-    #sliderButton {
+    .button-container {
         position: absolute;
         bottom: -1.8rem !important;
         left: 7.4rem !important;
@@ -74,8 +78,19 @@
         border-radius: 10rem !important; 
     }
     
-    #sliderButton img {
-        width: 0.8rem !important;
+    .prevButton {
+        border: none;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        background-color: transparent
+    }
+    
+    .nextButton {
+        border: none;
+        background-color: transparent;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        height: 2.5rem;
     }
 
     .text-container {

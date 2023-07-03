@@ -24,10 +24,13 @@
   </div>
   
   
-  <article class="article-container tanya" id="articleContainerTanya">
+  <article class="article-container active" id="articleContainerTanya">
     <section class="img-container" id="imgContainer">
       <img class="user-pic" src="/images/image-tanya.jpg" alt="">
-      <button id="sliderButton"><img id="leftButton" src="/images/icon-prev.svg" alt=""><img  id="rightButton" src="/images/icon-next.svg" alt=""></button>
+      <div class="button-container">
+        <button class="prevButton" id="prevOneButton"><img src="/images/icon-prev.svg" alt=""></button>
+        <button class="nextButton" id="nextOneButton"><img src="/images/icon-next.svg" alt=""></button>
+      </div>
     </section>
 
     <section class="text-container" id="textContainer">
@@ -45,7 +48,14 @@
 
   </article>
 
-  <article class="article-container john" id="articleContainerTanya">
+  <article class="article-container" id="articleContainerJohn">
+    <section class="img-container" id="imgContainer">
+      <img class="user-pic" src="/images/image-john.jpg" alt="">
+      <div class="button-container">
+        <button class="prevButton" id="prevButton"><img src="/images/icon-prev.svg" alt=""></button>
+        <button class="nextButton" id="nextButton"><img src="/images/icon-next.svg" alt=""></button>
+      </div>
+    </section>
     <section class="text-container" id="textContainer">
       <p class="text-paragraph__quote">
         “ If you want to lay the best foundation possible I’d recommend taking this course. 
@@ -57,13 +67,8 @@
         <span>John Tarkpor</span>
         Junior Front-end Developer
       </p>
+    </article>
     </section>
-
-    <section class="img-container" id="imgContainer">
-      <img class="user-pic" src="/images/image-john.jpg" alt="">
-      <button id="sliderButton"><img src="/images/icon-prev.svg" alt=""><img src="/images/icon-next.svg" alt=""></button>
-    </section>
-  </article>
-    
+  <script type="module" src="/script.js" defer></script>
 </body>
 </html>
