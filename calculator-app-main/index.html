@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">  
+
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/desktop.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+
+  <main class="calculator">
+    <header class="calculator-header">
+      <h2>calc</h2>
+      <div class="calculator__switch-container">
+        <p>THEME</p>
+        <input class="theme-switcher" id="themeSwitch" type="range" min="1" max="3">
+        <div class="theme-indicator">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="calculator-screen">
+      <p class="calculator-screen__text" id="screenText"></p>
+      <p class="calculator-screen__text" id="screenTextDummy">0</p>
+    </section>
+
+    <section class="calculator-buttons">
+      <button class="calculator-button" id="button7" value="7">7</button>
+      <button class="calculator-button" id="button8" value="8">8</button>
+      <button class="calculator-button" id="button9" value="9">9</button>
+      <button class="calculator-button" id="buttonDel" value="del">DEL</button>
+      <button class="calculator-button" id="button4" value="4">4</button>
+      <button class="calculator-button" id="button5" value="5">5</button>
+      <button class="calculator-button" id="button6" value="6">6</button>
+      <button class="calculator-button" id="buttonPlus" value="+">+</button>
+      <button class="calculator-button" id="button1" value="1">1</button>
+      <button class="calculator-button" id="button2" value="2">2</button>
+      <button class="calculator-button" id="button3" value="3">3</button>
+      <button class="calculator-button" id="buttonMinus" value="-">-</button>
+      <button class="calculator-button" id="buttonPoint" value=".">.</button>
+      <button class="calculator-button" id="button0" value="0">0</button>
+      <button class="calculator-button" id="buttonDivide" value="/">/</button>
+      <button class="calculator-button" id="buttonMultiply" value="*">x</button>
+      <button class="calculator-button" id="buttonReset" value="reset">RESET</button>
+      <button class="calculator-button" id="buttonEqual" value="=">=</button>
+    </section>
+  </main>
+  
+<script src="/script.js" defer type="module"></script>
+</body>
+</html>
