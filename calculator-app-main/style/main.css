@@ -70,8 +70,8 @@ button {
 input[type="range"] {
     -webkit-appearance: none;
 
-    height: 1.5rem;
-    width: 4.3rem;
+    height: 1.6rem;
+    width: 4.4rem;
     padding: 0.3rem;
 
     background: var(--theme1-color-blue-key-bg);
@@ -134,10 +134,11 @@ input[type="range"]::-webkit-slider-thumb {
 
 .theme-indicator {
     position: absolute;
-    width: 3rem;
-    top: -1rem;
-    right: 0.7rem;
+    width: 3.3rem;
+    top: -1.3rem;
+    right: 0.58rem;
 
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
 }
