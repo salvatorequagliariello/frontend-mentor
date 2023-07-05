@@ -3,7 +3,6 @@ const buttons = document.getElementsByClassName("calculator-button");
 const dummy = document.getElementById("screenTextDummy");
 
 const operations = [];
-
 for (const button of buttons) {
     button.addEventListener("click", () => {
         dummy.remove();
