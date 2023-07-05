@@ -53,6 +53,14 @@ body {
     background-color: var(--theme1-color-blue-bg);
 }
 
+.theme2-body {
+    background-color: var(--theme2-color-gray-bg);
+}
+
+.theme3-body {
+    background-color: var(--theme3-color-violet-bg);
+}
+
 button {
     font-family: var(--font-league);
     border: none;
@@ -102,6 +110,14 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 2rem;
 }
 
+.theme2-header-text {
+    color: var(--theme2-color-yellow-text);
+}
+
+.theme3-header-text {
+    color: var(--theme3-color-yellow-text);
+}
+
 .calculator-header h2 {
     margin-left: 0.5rem;
 }
@@ -147,6 +163,23 @@ input[type="range"]::-webkit-slider-thumb {
     color: white;
     font-size: 2.4rem;
     line-height: 1;
+}
+
+.theme2-screen-bg {
+    background-color: var(--theme2-color-gray-screen-bg);
+}
+
+.theme2-text-screen {
+    color: var(--theme2-color-yellow-text);
+}
+
+.theme3-screen-bg {
+    background-color: var(--theme3-color-gray-screen-bg);
+    color: var(--theme3-color-yellow-text);
+}
+
+.theme3-text-screen {
+    color: var(--theme3-color-yellow-text);
 }
 
 .calculator-buttons {
