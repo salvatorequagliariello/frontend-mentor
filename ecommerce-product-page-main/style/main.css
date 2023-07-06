@@ -80,7 +80,7 @@ main {
 .product-container {
     margin: 0 auto;
     display: flex;
-    gap: 7.5rem;
+    gap: 7.8rem;
 }
 
 .product-image {
@@ -102,15 +102,113 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    column-gap: 2rem;
-}
-
-.product-text-container {
-    flex: 1;
+    column-gap: 1.9rem;
 }
 
 .product-image__carousel img {
     width: 100%;
     border-radius: 0.8rem;
     object-fit: contain;
+}
+
+.product-text-container {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    font-family: var(--font-kumbh);
+}
+
+.product-text-container h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    
+    color: var(--primary-color-orange-400);
+}
+
+.product-text-container h1 {
+    margin: 1rem 0 2rem 0;
+    font-size: 2.77rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.product-description {
+    color: var(--neutral-color-blue-600);
+    margin-bottom: 1.5rem;
+}
+
+.discounted-price__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.discounted-price {
+    margin-right: 1.5rem;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    font-family: var(--font-kumbh);
+}
+
+.discount {
+    font-weight: 700;
+    font-size: 1rem;
+
+    color: var(--primary-color-orange-400);
+    font-family: var(--font-kumbh);
+}
+
+.old-price {
+    color: var(--neutral-color-blue-600);
+    text-decoration: dashed;
+    opacity: 0.75;
+}
+
+.buy-section {
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8rem;
+
+    padding: 1rem 1.8rem;
+    border-radius: 0.7rem;
+    
+    font-weight: 700;
+    background-color: var(--neutral-color-blue-200);
+}
+
+.buy-section button {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    
+    padding: 1rem 4.5rem;
+    
+    color: var(--neutral-color-white);
+    background-color: var(--primary-color-orange-400);
+    border: none;
+    border-radius: 0.7rem;
+
+    font-family: var(--font-kumbh);
+    font-size: 1rem;
+    font-weight: 800;
 }
