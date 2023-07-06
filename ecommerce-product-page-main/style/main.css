@@ -71,3 +71,46 @@ header nav {
     height: 50px;
     object-fit: contain;
 }
+
+main {
+    width: 100%;
+    padding: 5.56rem 13.2rem;
+}
+
+.product-container {
+    margin: 0 auto;
+    display: flex;
+    gap: 7.5rem;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image__arrows-container {
+    display: none;
+}
+
+.product-image__main-img img {
+    border-radius: 1rem;
+}
+
+.product-image__carousel {
+    margin-top: 2rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+}
+
+.product-text-container {
+    flex: 1;
+}
+
+.product-image__carousel img {
+    width: 100%;
+    border-radius: 0.8rem;
+    object-fit: contain;
+}
