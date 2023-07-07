@@ -113,8 +113,7 @@ main {
 
 .product-image__carousel img:hover {
     cursor: pointer;
-    outline: 2px solid hsla(26, 100%, 55%, 1);
-
+    opacity: 0.2;
 }
 
 .product-text-container {
@@ -237,5 +236,5 @@ main {
 
 .active-image {
     opacity: 0.2;
-    outline: 2px solid hsla(26, 100%, 55%, 1);
+    border: 2px solid rgb(255, 111, 0);
 }
