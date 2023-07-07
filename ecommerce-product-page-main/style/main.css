@@ -111,6 +111,12 @@ main {
     object-fit: contain;
 }
 
+.product-image__carousel img:hover {
+    cursor: pointer;
+    outline: 2px solid hsla(26, 100%, 55%, 1);
+
+}
+
 .product-text-container {
     flex: 1;
 
@@ -227,4 +233,9 @@ main {
 .buy-section button img {
     width: 18px;
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(216deg) brightness(107%) contrast(106%);
+}
+
+.active-image {
+    opacity: 0.2;
+    outline: 2px solid hsla(26, 100%, 55%, 1);
 }
