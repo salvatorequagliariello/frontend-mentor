@@ -36,7 +36,7 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    border-bottom: 0.15px solid hsla(0, 0%, 0%, 0.25);
+    border-bottom: 0.15px solid hsla(0, 0%, 52%, 0.1);
 }
 
 .header__left-section {
@@ -141,6 +141,8 @@ main {
 .product-description {
     color: var(--neutral-color-blue-600);
     margin-bottom: 1.5rem;
+
+    line-height: 1.63;
 }
 
 .discounted-price__container {
@@ -150,7 +152,7 @@ main {
 }
 
 .discounted-price {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
 
     font-size: 1.75rem;
     font-weight: 700;
@@ -161,20 +163,27 @@ main {
 
 .discount {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.05rem;
+
+    padding: 2px 9px;
+    border-radius: 5px;
 
     color: var(--primary-color-orange-400);
+    background-color: var(--primary-color-orange-100);
     font-family: var(--font-kumbh);
 }
 
 .old-price {
+    margin-top: 5px;
+
     color: var(--neutral-color-blue-600);
     text-decoration: dashed;
     opacity: 0.75;
+    font-size: 1.05rem;
 }
 
 .buy-section {
-    margin-top: 2.2rem;
+    margin: 2.2rem 0 1rem 0;
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
@@ -199,7 +208,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
     
     padding: 1rem 4.5rem;
     
@@ -211,4 +220,11 @@ main {
     font-family: var(--font-kumbh);
     font-size: 1rem;
     font-weight: 800;
+
+    box-shadow: 0px 22px 30px hsla(26, 100%, 55%, 0.2);
+}
+
+.buy-section button img {
+    width: 18px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(216deg) brightness(107%) contrast(106%);
 }
