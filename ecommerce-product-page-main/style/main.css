@@ -238,3 +238,70 @@ main {
     opacity: 0.2;
     border: 2px solid rgb(255, 111, 0);
 }
+
+.lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsla(0, 0%, 0%, 0.75);
+}
+
+.light-main-img__container {
+    width: 34.3rem;
+}
+
+.light-close {
+    left: 528px;
+    position: relative;
+    margin-bottom: 23px;
+
+    width: 21px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(216deg) brightness(107%) contrast(106%);
+}
+
+.lightbox__arrows-container {
+    position: absolute;
+    align-self: center;
+    top: 23.2rem;
+    left: 26.2rem;
+    width: 37.7rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lightbox__arrows-container img {
+    background-color: white;
+    padding: 19px 22px;
+    border-radius: 100%;
+}
+
+#lightMainImg {
+    border-radius: 1rem;
+}
+
+.lightbox-carousel {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 1.95rem;
+
+    width: 28rem;
+}
+
+.lightbox-image-button {
+    border-radius: 0.7rem;
+}
