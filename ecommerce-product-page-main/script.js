@@ -7,7 +7,13 @@ const lightMainImg = document.getElementById("lightMainImg");
 const carouselDivs = document.getElementsByClassName("lightbox-img-container");
 const prev = document.getElementById("lightPrev");
 const next = document.getElementById("lightNext");
+const close = document.getElementsByClassName("light-close")[0];
+
 let preselected = -1;
+
+close.addEventListener("click", () => {
+    lightbox.classList.remove("flex");
+})
 
 mainImg.addEventListener("click", () => {
     lightbox.classList.add("flex");
