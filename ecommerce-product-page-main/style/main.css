@@ -61,9 +61,26 @@ header nav {
 }
 
 .header__right-section {
+    position: relative;
+
     display: flex;
     align-items: center;
     gap: 2.9rem;
+}
+
+#cartIconCounter {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 5.6rem;
+    padding: 0 7px;
+
+    font-size: 0.7rem;
+    font-family: var(--font-kumbh);
+    background-color: var(--primary-color-orange-400);
+    color: white;
+
+    border-radius: 4px;
 }
 
 .avatar-pic {
