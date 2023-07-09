@@ -5,7 +5,9 @@ const addCart = document.getElementById("addCart");
 const cartIcon = document.getElementById("cartIcon");
 const cartContainer = document.getElementsByClassName("cart-container")[0];
 
-let buyCounter = 0;
+const itemQuantity = document.getElementById("itemCount");
+const itemPrices = document.getElementById("itemPrice");
+
 let cartCounter = 0;
 
 cartIcon.addEventListener("click", () => {
@@ -18,9 +20,12 @@ cartIcon.addEventListener("click", () => {
 
 addCart.addEventListener("click", () => {
     if (cartCounter >= 1) {
-        buyCounter = cartContainer;
+        itemQuantity.innerText = cartCounter;
+        itemPrices.innerText = `$${(125 * cartCounter).toFixed(2)}`;
+
         document.getElementsByClassName("cart-empty")[0].style.display = "none";
         document.getElementsByClassName("cart-full")[0].style.display = "block";
+        
     } else {
         document.getElementsByClassName("cart-full")[0].style.display = "none";
         document.getElementsByClassName("cart-empty")[0].style.display = "flex";

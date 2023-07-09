@@ -393,6 +393,11 @@ main {
     padding: 23px 23px 0 23px;
 }
 
+#itemPrice {
+    color: black;
+    font-weight: 700;
+}
+
 .cart-item-container {
     width: 100%;
     display: flex;
