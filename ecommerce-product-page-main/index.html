@@ -32,22 +32,27 @@
     </div>
 
     <div class="header__right-section">
-      <img src="/images/icon-cart.svg" alt="cart icon">
+      <img id="cartIcon" src="/images/icon-cart.svg" alt="cart icon">
       <img class="avatar-pic" src="/images/image-avatar.png" alt="profile pic">
     </div>
   </header>
 
   <div class="cart-container">
     <p class="cart-title">Cart</p>
-    <div class="cart-item-container">
-      <img class="cart-item-img" src="/images/image-product-1.jpg" alt="">
-      <div class="cart-item-text-container">
-        <p>Fall Limited Edition Sneakers</p>
-        <p>$125.00 x <span id="itemCount">3</span> <span id="itemPrice"></span></p>
-      </div>
-      <img src="/images/icon-delete.svg" alt="">
+    <div class="cart-empty">
+      <p>Your cart is empty.</p>
     </div>
-    <button>Checkout</button>
+    <div class="cart-full">
+      <div class="cart-item-container">
+        <img class="cart-item-img" src="/images/image-product-1.jpg" alt="">
+        <div class="cart-item-text-container">
+          <p>Fall Limited Edition Sneakers</p>
+          <p>$125.00 x <span id="itemCount">3</span> <span id="itemPrice"></span></p>
+        </div>
+        <img src="/images/icon-delete.svg" alt="">
+      </div>
+      <button>Checkout</button>
+    </div>
   </div>
 
   <div class="lightbox">
