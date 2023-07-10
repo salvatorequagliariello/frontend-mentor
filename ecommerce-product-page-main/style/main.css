@@ -68,6 +68,10 @@ header nav {
     gap: 2.9rem;
 }
 
+#cartIcon {
+    cursor: pointer;
+}
+
 #cartIconCounter {
     display: none;
     position: absolute;
@@ -81,6 +85,7 @@ header nav {
     color: white;
 
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .avatar-pic {
