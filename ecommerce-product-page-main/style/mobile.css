@@ -198,4 +198,49 @@
         font-weight: 700;
         background-color: var(--neutral-color-blue-200);
     }
+
+    /* MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV */
+    /* MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV */
+
+    .mobile-nav-view {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+        z-index: 40;
+
+        background-color: hsla(0, 0%, 0%, 0.75);
+    }
+
+    .mobile-nav-container {
+        height: 100vh;
+        width: 67%;
+
+        display: flex;
+        flex-direction: column;
+        z-index: 41;
+
+        background-color: white;
+        padding: 1.2rem;
+    }
+
+    .mobile-nav-container img {
+        width: 13px;
+        margin-bottom: 2.6rem;
+
+        cursor: pointer;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        gap: 1rem;
+        color: black;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
 }
