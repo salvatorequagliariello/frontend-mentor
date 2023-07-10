@@ -219,23 +219,22 @@
         height: 100vh;
         width: 67%;
 
-        display: flex;
+
         flex-direction: column;
         z-index: 41;
-
+        
         background-color: white;
         padding: 1.2rem;
     }
-
+    
     .mobile-nav-container img {
         width: 13px;
         margin-bottom: 2.6rem;
-
+        
         cursor: pointer;
     }
-
+    
     .mobile-nav {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         
@@ -243,5 +242,18 @@
         color: black;
         font-weight: 700;
         font-size: 0.9rem;
+    }
+
+    /* CART CART CART CART CART CART CART CART CART CART CART CART */
+    /* CART CART CART CART CART CART CART CART CART CART CART CART */
+    .cart-container {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 4.7rem;
+        
+        background-color: white;
+        box-shadow: 2px 20px 30px hsla(0, 0%, 57%, 0.3);
+        border-radius: 0.5rem;
+        font-family: var(--font-kumbh);
     }
 }
