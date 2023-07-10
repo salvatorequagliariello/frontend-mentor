@@ -203,6 +203,7 @@
     /* MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV */
 
     .mobile-nav-view {
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
