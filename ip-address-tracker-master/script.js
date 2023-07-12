@@ -57,3 +57,5 @@ button.addEventListener("click", e => {
         inputId.classList.add("error-border");
     }
 });
+
+getIp(`192.212.174.101`);
