@@ -1,4 +1,4 @@
-import { DateTime } from "/luxon";
+import { DateTime } from "luxon";
 
 const ipAddressOutput = document.getElementById("ipAddressOut");
 const locationOut = document.getElementById("locationOut");
