@@ -61,7 +61,9 @@ html, body {
 
 .input-container input:focus {
     outline: none !important;
-    box-shadow: inset 1px 1px 10px var(--primary-color-grey-600);
+    -webkit-box-shadow:inset 0px 0px 0px 1.9px var(--primary-color-grey-600);
+    -moz-box-shadow:inset 0px 0px 0px 1.9px var(--primary-color-grey-600);
+    box-shadow:inset 0px 0px 0px 1.9px var(--primary-color-grey-600);
 }
 
 .input-container input::placeholder {

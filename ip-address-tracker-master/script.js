@@ -1,10 +1,10 @@
-import { DateTime } from "luxon";
-
 const ipAddressOutput = document.getElementById("ipAddressOut");
 const locationOut = document.getElementById("locationOut");
 const timezoneOut = document.getElementById("timezoneOut");
 const ispOut = document.getElementById("ispOut");
 
+const inputId = document.getElementById("inputId");
+const button = document.getElementById("searchButton");
 
 const getIp = async (ip) => {
     const response = await fetch(`http://ip-api.com/json/${ip}`);
@@ -14,11 +14,17 @@ const getIp = async (ip) => {
     const timezone = data.timezone;
     const isp = data.isp;
 
-
+    const timezoneString = ct.getTimezone(timezone).dstOffsetStr;
+    
+    ipAddressOutput.innerText = ipAddress;
+    locationOut.innerText = location;
+    timezoneOut.innerText = `UTC ${timezoneString}`;
+    ispOut.innerText = isp;
 }
 
-var overrideZone = DateTime.fromISO("2017-05-15T09:10:23", { zone: "Europe/Paris" });
-console.log(overrideZone);
+button.addEventListener("click", e => {
+    e.preventDefault();
+    getIp(inputId.value);
+});
 
-
-getIp("192.212.174.101");
+// 192.212.174.101
