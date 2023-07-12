@@ -27,7 +27,8 @@
     <h1>IP Address Tracker</h1>
 
     <div class="input-container">
-      <input id="inputId" type="text" placeholder="Search for any IP address or domain">
+      <input id="inputId" type="text" placeholder="Search for any IP address or domain" required maxlength="45">
+      <p class="error-message">Please, enter a valid IP address.</p>
       <button id="searchButton" type="submit"><img src="/images/icon-arrow.svg" alt=""></button>
     </div>
     

@@ -41,6 +41,7 @@ html, body {
 }
 
 .input-container {
+    position: relative;
     margin-top: 1.5rem;
     width: 100%;
 
@@ -82,6 +83,33 @@ html, body {
 
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+}
+
+.input-container button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-grey-800);
+}
+
+.input-container button:active {
+    cursor: pointer;
+    background-color: var(--primary-color-grey-600);
+}
+
+.error-message {
+    position: absolute;
+    display: none;
+    top: 3.7rem;
+    left: 5px;
+
+    color: rgb(255, 12, 12);
+    font-size: 0.8rem;
+}
+
+.error-border {
+    outline: none !important;
+    -webkit-box-shadow:inset 0px 0px 0px 1.9px rgb(255, 12, 12);
+    -moz-box-shadow:inset 0px 0px 0px 1.9px rgb(255, 12, 12);
+    box-shadow:inset 0px 0px 0px 1.9px rgb(255, 12, 12);
 }
 
 .data-container {
