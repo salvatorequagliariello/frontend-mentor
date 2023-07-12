@@ -1,0 +1,122 @@
+@media screen and (min-width: 1000px) {
+    .background-top {
+        width: 100%;
+        height: 17.5rem;
+    
+        background-image: url("/images/pattern-bg-desktop.png");
+    }
+
+    .app-container {
+        position: absolute;
+        top: 1.47rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+    
+        width: 70rem;
+    }
+
+    .app-container h1 {
+        font-size: 1.97rem;
+    }
+
+    .input-container {
+        position: relative;
+        margin-top: 1.5rem;
+        width: 49.5%;
+    }
+
+    .input-container input {
+        flex: 1.81;
+    
+        padding: 1.16rem 1.5rem;
+        font-size: 1.1rem;
+        letter-spacing: -0.4px;
+    
+        border: none;
+        border-radius: 0;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .input-container input::placeholder {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .input-container button {
+        flex: 0.19;
+        border: none;
+        background-color: black;
+        display: flex;
+    
+        align-items: center;
+        justify-content: center;
+    
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .data-container {
+        margin-top: 3rem;
+        width: 99.3%;
+        height: 10rem;
+    
+        background-color: white;
+        border-radius: 1rem;
+    
+        display: flex;
+        flex-direction: row;
+    
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        padding: 2.4rem 0;
+    }
+
+    .data-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3.7rem;
+        padding: 0 2rem;
+    
+        width: 100%;
+        border-left: 0.5px solid var(--primary-color-grey-600);
+        height: 80px;
+    }
+
+    #inputIdContainer {
+        border-left: none;
+    }
+
+    .data-section h5 {
+        font-size: 0.76rem;
+        line-height: 1;
+        letter-spacing: 1.7px;
+        font-weight: 700;
+    }
+
+    .data-section p {
+        position: absolute;
+        top: 30px;
+        text-align: left;
+        padding-right: 0.5rem;
+        
+        line-height: 1;
+        font-size: 1.6rem;
+        color: var(--primary-color-grey-800);
+        font-weight: 500;
+    }
+
+    .map-container {
+        width: 100%;
+        margin: 0 auto;
+        height: calc(100vh - 17.5rem);
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
