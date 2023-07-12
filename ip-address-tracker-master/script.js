@@ -26,5 +26,3 @@ button.addEventListener("click", e => {
     e.preventDefault();
     getIp(inputId.value);
 });
-
-// 192.212.174.101
