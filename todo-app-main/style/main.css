@@ -178,6 +178,7 @@ body {
     color: var(--light-grey-600);
     font-size: 0.7rem;
     font-weight: 700;
+    font-family: var(--font-primary);
 
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;

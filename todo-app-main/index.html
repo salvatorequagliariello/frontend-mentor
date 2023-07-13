@@ -33,7 +33,7 @@
     </div>
 
     <section class="input-container">
-      <button class="add-button"></button>
+      <button id="addButton" class="add-button"></button>
       <input id="inputTodo" type="text" placeholder="Create a new todo..." required minlength="1">
     </section>
 
@@ -47,12 +47,12 @@
           <button class="todo-close"><img src="/images/icon-cross.svg" alt=""></button>
         </article>
 
-        <div class="todo-footer">
-          <p><span id="todo-count">0</span> items left</p>
-          <p>Clear Completed</p>
-        </div>
-    </section>
-
+      </section>
+      <div class="todo-footer">
+        <p><span id="todo-count">0</span> items left</p>
+        <p>Clear Completed</p>
+      </div>
+      
     <section class="app-filter-container">
       <button class="filter-button">All</button>
       <button class="filter-button">Active</button>
@@ -62,5 +62,6 @@
     <p class="app-container__text">Drag and drop to reorder list</p>
   </div>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
