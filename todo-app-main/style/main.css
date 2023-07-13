@@ -1,0 +1,228 @@
+:root {
+    --primary-color-blue-200: hsl(220, 98%, 61%);
+    --primary-check-bg: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+
+    --light-grey-100: hsl(0, 0%, 98%);
+    --light-grey-200: hsl(236, 33%, 92%);
+    --light-grey-400: hsl(233, 11%, 84%);
+    --light-grey-600: hsl(236, 9%, 61%);
+    --light-grey-800: hsl(235, 19%, 35%);
+
+    --dark-blue-400: hsl(235, 21%, 11%);
+    --dark-blue-600: hsl(235, 24%, 19%);
+    --dark-grey-100: hsl(234, 39%, 85%);
+    --dark-grey-200-hover: hsl(236, 33%, 92%);
+    --dark-grey-400: hsl(234, 11%, 52%);
+    --dark-grey-600: hsl(233, 14%, 35%);
+    --dark-grey-800: hsl(237, 14%, 26%);
+
+    --font-primary: 'Josefin Sans', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #F6F6F8;
+}
+
+.background-top {
+    width: 100%;
+    height: 12.5rem;
+
+    background-image: url("/images/bg-mobile-light.jpg");
+}
+
+.app-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2.6rem;
+
+    min-width: 87.4%;
+    max-width: 30rem;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.6rem;
+
+    color: white;
+}
+
+.theme-switch {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(/images/icon-moon.svg);
+}
+
+.input-container {
+    margin-top: 1.6rem;
+
+    width: 100%;
+    height: 3rem;
+    padding: 0 1.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+
+    background-color: white;
+    border-radius: 0.3rem;
+}
+
+.add-button {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    vertical-align: middle;
+
+    background: none;
+    border: 1px solid var(--light-grey-200);
+    border-radius: 100%;
+}
+
+#inputTodo {
+    border: none;
+    background: none;
+    margin-top: 3px;
+
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--light-grey-800);
+}
+
+#inputTodo:focus {
+    outline: none !important;
+}
+
+#inputTodo::placeholder {
+    color: var(--light-grey-600);
+    opacity: 0.6;
+}
+
+.todo-list {
+    margin-top: 1rem;
+
+    width: 100%;
+    border-radius: 0.3rem;
+    font-family: var(--font-primary);
+}
+
+.todo-list > article:first-child {
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.todo-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.2em 1rem 1.3rem;
+
+    background-color: white;
+    color: var(--light-grey-800);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    border-bottom: 1.5px solid var(--light-grey-200);
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.todo-text {
+    margin-top: 3px;
+    opacity: 0.7;
+}
+
+.todo-close {
+    border: none;
+    background: none;
+    width: 25px;
+}
+
+.todo-footer {
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    color: var(--light-grey-600);
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.todo-footer p {
+    opacity: 0.7;
+}
+
+.app-filter-container {
+    margin-top: 1rem;
+
+    width: 100%;
+    height: 3rem;
+    padding: 0 1.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    background-color: white;
+    border-radius: 0.3rem;
+}
+
+.filter-button {
+    background: none;
+    border: none;
+
+    font-family: var(--font-primary);
+    color: var(--light-grey-800);
+    opacity: 0.6;
+
+    font-weight: 700;
+}
+
+.app-container__text {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    font-size: 0.8rem;
+    font-family: var(--font-primary);
+    color: var(--light-grey-800);
+    opacity: 0.4;
+
+    font-weight: 700;
+}

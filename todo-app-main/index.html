@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="/style/reset.css">
+  <link rel="stylesheet" href="/style/main.css">
+  <link rel="stylesheet" href="/style/desktop.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Todo app</title>
 
@@ -26,18 +34,21 @@
 
     <section class="input-container">
       <button class="add-button"></button>
-      <input type="text" required minlength="1">
+      <input id="inputTodo" type="text" placeholder="Create a new todo..." required minlength="1">
     </section>
 
     <section class="todo-list">
-        <article class="todo-container">
-          <button class="add-button"></button>
-          <p class="todo-text"></p>
+
+        <article class="todo-container" draggable="true">
+          <div class="left-section">
+            <button class="add-button"></button>
+            <p class="todo-text">Jog around the park 3x</p>
+          </div>
           <button class="todo-close"><img src="/images/icon-cross.svg" alt=""></button>
         </article>
 
         <div class="todo-footer">
-          <p><span id="todo-count"></span> items left</p>
+          <p><span id="todo-count">0</span> items left</p>
           <p>Clear Completed</p>
         </div>
     </section>
@@ -50,6 +61,6 @@
     
     <p class="app-container__text">Drag and drop to reorder list</p>
   </div>
-  
+
 </body>
 </html>
