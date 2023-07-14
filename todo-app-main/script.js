@@ -29,6 +29,14 @@ const createTodo = (text) => {
         
         closeButton.parentElement.remove();
     })
+
+    checkButton.addEventListener("click", () => {
+        if (checkButton.classList.contains("done-light")) {
+            checkButton.classList.remove("done-light");
+        } else {
+            checkButton.classList.add("done-light");
+        }
+    })
     
     todoAllArray.push({
         completed: false,
