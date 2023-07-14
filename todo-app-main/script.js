@@ -19,6 +19,7 @@ const createTodo = (text) => {
 
     closeButton.addEventListener("click", () => {
         const index = todoAllArray.indexOf(todoAllArray)
+        const parent = todoAllArray.findIndex(x => x.element ==="yutu");
     })
 
     todoAllArray.push({
