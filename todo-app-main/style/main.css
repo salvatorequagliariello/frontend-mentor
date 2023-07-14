@@ -28,7 +28,7 @@ body {
 }
 
 .background-top {
-    width: 100%;
+    width: 100vw;
     height: 12.5rem;
 
     background-image: url("/images/bg-mobile-light.jpg");
@@ -45,6 +45,8 @@ body {
 }
 
 .title-container {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +62,7 @@ body {
 }
 
 .theme-switch {
-    height: 20px;
+    height: 28px;
     width: 20px;
     vertical-align: middle;
 
@@ -88,6 +90,7 @@ body {
 }
 
 .add-button {
+    position: relative;
     width: 20px;
     height: 20px;
     align-self: center;
@@ -96,6 +99,37 @@ body {
     background: none;
     border: 1px solid var(--light-grey-200);
     border-radius: 100%;
+
+    cursor: pointer;
+}
+
+.done-light {
+    border: 1px solid transparent;
+    background:  linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    background-image: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+
+.check {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+}
+
+.add-button:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+
+#addButton:active {
+    border: 1px solid transparent;
+    background:  linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    background-image: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
 }
 
 #inputTodo {
