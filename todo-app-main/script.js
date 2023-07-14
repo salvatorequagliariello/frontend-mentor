@@ -8,6 +8,7 @@ const todoAllArray = [];
 const todoCompletedArray = [];
 
 const buttonsInList = todoAllList.querySelectorAll(".add-button");
+let todoDivsCounter = 0;
 
 // ADD TODO TO ALL LIST AND ARRAY
 const createTodo = (text) => {
@@ -15,17 +16,25 @@ const createTodo = (text) => {
     const todoText = todoContainer.querySelector(".todo-text");
     todoText.innerText = text;
     const closeButton = todoContainer.querySelector(".todo-close");
+    closeButton.setAttribute("id", `close-${todoDivsCounter}`);
     const checkButton = todoContainer.querySelector(".add-button");
+    checkButton.setAttribute("id", `check-${todoDivsCounter}`);
 
+    
     closeButton.addEventListener("click", () => {
-        const index = todoAllArray.indexOf(todoAllArray)
-        const parent = todoAllArray.findIndex(x => x.element ==="yutu");
+        const parent = todoAllArray.findIndex(x => closeButton.id.includes(x.number));
+        
+        todoAllArray.splice(todoAllArray[parent], 1);
+        console.log(todoAllArray);
+        
+        closeButton.parentElement.remove();
     })
-
+    
     todoAllArray.push({
         completed: false,
         element: todoContainer,
-        todoText: text, 
+        todoText: text,
+        number: todoDivsCounter,
     });
 
     for (const todo of todoAllArray) {
@@ -33,9 +42,8 @@ const createTodo = (text) => {
     }
 
     todoCountDiv.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
-
+    todoDivsCounter += 1;
 };
-
 
 
 addButton.addEventListener("click",() => {
