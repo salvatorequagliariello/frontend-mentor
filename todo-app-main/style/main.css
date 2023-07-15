@@ -264,6 +264,16 @@ body {
     opacity: 0.6;
 
     font-weight: 700;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    color: #0b0b0e;
+}
+
+.selected-filter-light {
+    opacity: 1;
+    color: #557FD2;
 }
 
 .app-container__text {

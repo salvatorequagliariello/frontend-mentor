@@ -75,6 +75,10 @@ allButton.addEventListener("click", () => {
     for (const todo of todoAllArray) {
         todoAllList.appendChild(todo.element);
     }
+
+    allButton.classList.add("selected-filter-light");
+    activeButton.classList.remove("selected-filter-light");
+    doneButton.classList.remove("selected-filter-light");
 })
 
 activeButton.addEventListener("click", () => {
@@ -87,6 +91,10 @@ activeButton.addEventListener("click", () => {
     for (const todo of activeTodos) {
         todoAllList.appendChild(todo.element);
     }
+
+    activeButton.classList.add("selected-filter-light");
+    allButton.classList.remove("selected-filter-light");
+    doneButton.classList.remove("selected-filter-light");
 })
 
 doneButton.addEventListener("click", () => {
@@ -99,4 +107,8 @@ doneButton.addEventListener("click", () => {
     for (const todo of activeTodos) {
         todoAllList.appendChild(todo.element);
     }
+
+    doneButton.classList.add("selected-filter-light");
+    activeButton.classList.remove("selected-filter-light");
+    allButton.classList.remove("selected-filter-light");
 })
