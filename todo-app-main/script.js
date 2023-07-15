@@ -1,5 +1,8 @@
 const inputTodo = document.getElementById("inputTodo");
 const addButton = document.getElementById("addButton");
+const allButton = document.getElementById("allButton");
+const activeButton = document.getElementById("activeButton");
+const doneButton = document.getElementById("doneButton");
 
 const todoAllList = document.getElementsByClassName("todo-list")[0];
 const todoCountDiv = document.getElementById("todo-count");
@@ -66,4 +69,34 @@ const createTodo = (text) => {
 addButton.addEventListener("click",() => {
     createTodo(inputTodo.value);
     inputTodo.value = "";
+})
+
+allButton.addEventListener("click", () => {
+    for (const todo of todoAllArray) {
+        todoAllList.appendChild(todo.element);
+    }
+})
+
+activeButton.addEventListener("click", () => {
+    const activeTodos = todoAllArray.filter(x => x.completed === false)
+
+    while (todoAllList.hasChildNodes()) {
+        todoAllList.removeChild(todoAllList.firstChild);
+    }
+
+    for (const todo of activeTodos) {
+        todoAllList.appendChild(todo.element);
+    }
+})
+
+doneButton.addEventListener("click", () => {
+    const activeTodos = todoAllArray.filter(x => x.completed === true)
+
+    while (todoAllList.hasChildNodes()) {
+        todoAllList.removeChild(todoAllList.firstChild);
+    }
+
+    for (const todo of activeTodos) {
+        todoAllList.appendChild(todo.element);
+    }
 })
