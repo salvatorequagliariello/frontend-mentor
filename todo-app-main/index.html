@@ -41,7 +41,11 @@
 
         <article class="todo-container" draggable="true">
           <div class="left-section">
-            <button class="add-button"><img class="check" src="/images/icon-check.svg" alt=""></button>
+            <button class="add-button">
+              <div class="checkmark">
+                <img class="check" src="/images/icon-check.svg" alt="">
+              </div>
+            </button>
             <p class="todo-text">Jog around the park 3x</p>
           </div>
           <button class="todo-close"><img src="/images/icon-cross.svg" alt=""></button>
@@ -54,14 +58,15 @@
       </div>
       
     <section class="app-filter-container">
-      <button class="filter-button">All</button>
-      <button class="filter-button">Active</button>
-      <button class="filter-button">Completed</button>
+      <button id="allButton" class="filter-button">All</button>
+      <button id="activeButton" class="filter-button">Active</button>
+      <button id="doneButton" class="filter-button">Completed</button>
     </section>
     
     <p class="app-container__text">Drag and drop to reorder list</p>
   </div>
 
   <script src="script.js" defer></script>
+  <script src="draganddrop.js" defer></script>
 </body>
 </html>
