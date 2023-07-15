@@ -29,9 +29,8 @@ const createTodo = (text) => {
         const parent = todoAllArray.findIndex(x => closeButton.id.includes(x.number));
         
         todoAllArray.splice(todoAllArray[parent], 1);
-        console.log(todoAllArray);
-        
         closeButton.parentElement.remove();
+        todoCountDiv.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
     })
 
     checkButton.addEventListener("click", () => {
@@ -66,4 +65,5 @@ const createTodo = (text) => {
 
 addButton.addEventListener("click",() => {
     createTodo(inputTodo.value);
+    inputTodo.value = "";
 })
