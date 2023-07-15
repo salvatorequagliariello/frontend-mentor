@@ -12,11 +12,15 @@ let todoDivsCounter = 0;
 
 // ADD TODO TO ALL LIST AND ARRAY
 const createTodo = (text) => {
+    if (text == "" || text.length <= 0) return;
+
     const todoContainer = document.getElementsByClassName("todo-container")[0].cloneNode(true);
     const todoText = todoContainer.querySelector(".todo-text");
     todoText.innerText = text;
+
     const closeButton = todoContainer.querySelector(".todo-close");
     closeButton.setAttribute("id", `close-${todoDivsCounter}`);
+
     const checkButton = todoContainer.querySelector(".add-button");
     checkButton.setAttribute("id", `check-${todoDivsCounter}`);
 
@@ -35,13 +39,13 @@ const createTodo = (text) => {
         todoAllArray[parent].completed = !todoAllArray[parent].completed;
         const checkmark = todoAllArray[parent].element.getElementsByClassName("checkmark")[0];
 
-        console.log(todoAllArray[parent]);
         if (todoAllArray[parent].completed) {
             checkmark.classList.add("done-light");
+            todoText.classList.add("crossed-text");
         } else {
             checkmark.classList.remove("done-light");
+            todoText.classList.remove("crossed-text");
         }
-        console.log(todoAllArray[parent]);
     })
     
     todoAllArray.push({
