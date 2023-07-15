@@ -31,11 +31,17 @@ const createTodo = (text) => {
     })
 
     checkButton.addEventListener("click", () => {
-        if (checkButton.classList.contains("done-light")) {
-            checkButton.classList.remove("done-light");
+        const parent = todoAllArray.findIndex(x => checkButton.id.includes(x.number));
+        todoAllArray[parent].completed = !todoAllArray[parent].completed;
+        const checkmark = todoAllArray[parent].element.getElementsByClassName("checkmark")[0];
+
+        console.log(todoAllArray[parent]);
+        if (todoAllArray[parent].completed) {
+            checkmark.classList.add("done-light");
         } else {
-            checkButton.classList.add("done-light");
+            checkmark.classList.remove("done-light");
         }
+        console.log(todoAllArray[parent]);
     })
     
     todoAllArray.push({

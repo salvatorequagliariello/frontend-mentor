@@ -90,17 +90,28 @@ body {
 }
 
 .add-button {
+    z-index: 20;
     position: relative;
     width: 20px;
     height: 20px;
     align-self: center;
     vertical-align: middle;
-
+    
     background: none;
     border: 1px solid var(--light-grey-200);
     border-radius: 100%;
-
+    
     cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .done-light {
