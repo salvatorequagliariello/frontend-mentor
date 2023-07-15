@@ -63,6 +63,14 @@ const createTodo = (text) => {
 
     todoCountDiv.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
     todoDivsCounter += 1;
+
+    todoContainer.addEventListener("dragover", (e) => {
+       e.preventDefault();
+    });
+
+    todoContainer.addEventListener("drop", (e) => {
+        
+    });
 };
 
 
