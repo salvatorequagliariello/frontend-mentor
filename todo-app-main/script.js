@@ -1,5 +1,3 @@
-import Sortable from "sortablejs";
-
 const inputTodo = document.getElementById("inputTodo");
 const addButton = document.getElementById("addButton");
 const allButton = document.getElementById("allButton");
@@ -122,3 +120,9 @@ doneButton.addEventListener("click", () => {
     activeButton.classList.remove("selected-filter-light");
     allButton.classList.remove("selected-filter-light");
 })
+
+
+new Sortable(todoAllList, {
+    animation: 150,
+    ghostClass: 'blue-background-class'
+});
