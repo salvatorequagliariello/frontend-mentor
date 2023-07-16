@@ -295,6 +295,10 @@ body {
     color: #8284a8;
 }
 
+.dark-mode-filters > button {
+    color: #8284a8;
+}
+
 .filter-button {
     background: none;
     border: none;
