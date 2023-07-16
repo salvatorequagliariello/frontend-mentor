@@ -73,6 +73,10 @@ body {
     background-image: url(/images/icon-moon.svg);
 }
 
+.dark-mode-switch {
+    background-image: url(/images/icon-sun.svg);
+}
+
 .input-container {
     margin-top: 1.6rem;
 
@@ -89,6 +93,10 @@ body {
     border-radius: 0.3rem;
 }
 
+.dark-mode-input-container {
+    background-color: #25273D
+}
+
 .add-button {
     z-index: 20;
     position: relative;
@@ -102,6 +110,11 @@ body {
     border-radius: 100%;
     
     cursor: pointer;
+}
+
+.dark-mode-add-button {
+    background-color: #25273D;
+    color: var(--dark-grey-100);
 }
 
 .checkmark {
