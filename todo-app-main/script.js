@@ -47,7 +47,9 @@ const createTodo = (text) => {
         } else {
             checkmark.classList.remove("done-light");
             todoText.classList.remove("crossed-text");
+
         }
+        todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
     })
     
     todoAllArray.push({
@@ -61,7 +63,7 @@ const createTodo = (text) => {
         todoAllList.appendChild(todo.element);
     }
 
-    todoCountDiv.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+    todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
     todoDivsCounter += 1;
 
     todoContainer.addEventListener("dragover", (e) => {
@@ -87,6 +89,8 @@ allButton.addEventListener("click", () => {
     allButton.classList.add("selected-filter-light");
     activeButton.classList.remove("selected-filter-light");
     doneButton.classList.remove("selected-filter-light");
+
+    todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
 })
 
 activeButton.addEventListener("click", () => {
@@ -103,6 +107,8 @@ activeButton.addEventListener("click", () => {
     activeButton.classList.add("selected-filter-light");
     allButton.classList.remove("selected-filter-light");
     doneButton.classList.remove("selected-filter-light");
+
+    todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
 })
 
 doneButton.addEventListener("click", () => {
@@ -119,4 +125,16 @@ doneButton.addEventListener("click", () => {
     doneButton.classList.add("selected-filter-light");
     activeButton.classList.remove("selected-filter-light");
     allButton.classList.remove("selected-filter-light");
+
+    todoCountDiv.innerText = todoCompletedArray.length;
 })
+
+
+new Sortable(todoAllList, {
+    animation: 150,
+    ghostClass: 'blue-background-class'
+});
+
+allButton.classList.add("selected-filter-light");
+activeButton.classList.remove("selected-filter-light");
+doneButton.classList.remove("selected-filter-light");

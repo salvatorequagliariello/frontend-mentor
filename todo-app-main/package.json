@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "buffer": "^6.0.3",
+    "emailjs-mime-parser": "^2.0.7",
     "sortablejs": "^1.15.0"
-  }
+  },
+  "name": "todo-app-main",
+  "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
