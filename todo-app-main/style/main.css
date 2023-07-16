@@ -31,7 +31,13 @@ body {
     width: 100vw;
     height: 12.5rem;
 
-    background-image: url("/images/bg-mobile-light.jpg");
+    background-image: url("/images/bg-desktop-light.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dark-mode-background-top {
+    background-image: url("/images/bg-desktop-dark.jpg");
 }
 
 .app-container {
@@ -94,7 +100,7 @@ body {
 }
 
 .dark-mode-input-container {
-    background-color: #25273D
+    background-color: #25273D;
 }
 
 .add-button {
@@ -168,6 +174,10 @@ body {
     color: var(--light-grey-800);
 }
 
+.dark-mode-input-todo {
+    color: #ffffff;
+}
+
 #inputTodo:focus {
     outline: none !important;
 }
@@ -206,6 +216,12 @@ body {
     font-weight: 700;
 
     border-bottom: 1.5px solid var(--light-grey-200);
+}
+
+.dark-mode-todo-container {
+    background-color: #25273D;
+    color: var(--dark-grey-100);
+    border-bottom: 1.5px solid #383B50;
 }
 
 .left-section {
@@ -252,6 +268,12 @@ body {
     opacity: 0.7;
 }
 
+.dark-mode-todo-footer {
+    background-color: #25273D;
+    color: #50526B;
+}
+
+
 .app-filter-container {
     margin-top: 1rem;
 
@@ -266,6 +288,11 @@ body {
 
     background-color: white;
     border-radius: 0.3rem;
+}
+
+.dark-mode-filters {
+    background-color: #25273D;
+    color: #8284a8;
 }
 
 .filter-button {
