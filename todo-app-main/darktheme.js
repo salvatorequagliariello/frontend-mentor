@@ -3,7 +3,8 @@ const inputContainer = document.querySelector(".input-container");
 const backgroundTop = document.querySelector(".background-top");
 const todoDivs = document.getElementsByClassName("todo-container");
 const todoFoot = document.querySelector(".todo-footer");
-const filterContainer = document.querySelector(".app-filter-container");
+const filterContainer = document.querySelectorAll(".app-filter-container");
+const desktopFooter = document.querySelector(".desktop-footer");
 
 let darkTheme = false;
 
@@ -22,7 +23,12 @@ themeButton.addEventListener("click", () => {
         }
         
         todoFoot.classList.add("dark-mode-todo-footer");
-        filterContainer.classList.add("dark-mode-filters");
+
+        for (const filter of filterContainer) {
+            filter.classList.add("dark-mode-filters");
+        }
+
+        desktopFooter.classList.add("dark-theme-desktop-footer");
     } else {
         document.body.style.backgroundColor = "#F6F6F8";
         backgroundTop.classList.remove("dark-mode-background-top");
@@ -35,6 +41,11 @@ themeButton.addEventListener("click", () => {
         }
         
         todoFoot.classList.remove("dark-mode-todo-footer");
-        filterContainer.classList.remove("dark-mode-filters");
+        
+        for (const filter of filterContainer) {
+            filter.classList.remove("dark-mode-filters");
+        }
+        
+        desktopFooter.classList.remove("dark-theme-desktop-footer");
     }
 })

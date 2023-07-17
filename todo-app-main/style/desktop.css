@@ -29,6 +29,11 @@
         border-bottom-right-radius: 0.3rem;
     }
 
+
+    .dark-theme-desktop-footer {
+        background-color: #25273D;
+    }
+
     .app-filter-container {
         width: fit-content;
         align-items: center;
@@ -46,5 +51,6 @@
     .desktop-filter {
         display: flex;
         align-items: center;
+        background-color: transparent;
     }
 }
