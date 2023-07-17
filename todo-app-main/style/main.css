@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-    background-color: #F6F6F8;
+    background-color: #FAFAFA;
 }
 
 .background-top {
@@ -37,7 +37,7 @@ body {
 }
 
 .dark-mode-background-top {
-    background-image: url("/images/bg-desktop-dark.jpg");
+    background-image: url("/images/bg-desktop-dark.jpg") !important;
 }
 
 .app-container {
@@ -86,7 +86,7 @@ body {
 }
 
 .dark-mode-switch {
-    background-image: url(/images/icon-sun.svg);
+    background-image: url(/images/icon-sun.svg) !important;
 }
 
 .input-container {
@@ -106,7 +106,7 @@ body {
 }
 
 .dark-mode-input-container {
-    background-color: #25273D;
+    background-color: #25273D !important;
 }
 
 .add-button {
@@ -136,7 +136,7 @@ body {
 }
 
 .dark-mode-add-button:active {
-    border: 1px solid transparent;
+    border: 1px solid transparent !important;
     background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box !important;
 }
 
@@ -236,9 +236,9 @@ body {
 }
 
 .dark-mode-todo-container {
-    background-color: #25273D;
-    color: var(--dark-grey-100);
-    border-bottom: 1.5px solid #383B50;
+    background-color: #25273D !important;
+    color: var(--dark-grey-100) !important;
+    border-bottom: 1.5px solid #383B50 !important;
 }
 
 .left-section {
@@ -292,8 +292,8 @@ body {
 }
 
 .dark-mode-todo-footer {
-    background-color: #25273D;
-    color: #50526B;
+    background-color: #25273D !important;
+    color: #50526B !important;
 }
 
 
@@ -314,12 +314,12 @@ body {
 }
 
 .dark-mode-filters {
-    background-color: #25273D;
-    color: #8284a8;
+    background-color: #25273D !important;
+    color: #8284a8 !important;
 }
 
 .dark-mode-filters > button {
-    color: #8284a8;
+    color: #8284a8 !important;
 }
 
 .filter-button {
