@@ -3,7 +3,10 @@ const inputContainer = document.querySelector(".input-container");
 const backgroundTop = document.querySelector(".background-top");
 const todoDivs = document.getElementsByClassName("todo-container");
 const todoFoot = document.querySelector(".todo-footer");
-const filterContainer = document.querySelector(".app-filter-container");
+const filterContainer = document.querySelectorAll(".app-filter-container");
+const desktopFooter = document.querySelector(".desktop-footer");
+const checks = document.querySelectorAll(".check");
+const allButts = document.querySelectorAll(".add-button");
 
 let darkTheme = false;
 
@@ -22,9 +25,22 @@ themeButton.addEventListener("click", () => {
         }
         
         todoFoot.classList.add("dark-mode-todo-footer");
-        filterContainer.classList.add("dark-mode-filters");
+
+        for (const filter of filterContainer) {
+            filter.classList.add("dark-mode-filters");
+        }
+
+        desktopFooter.classList.add("dark-theme-desktop-footer");
+
+        for (const check of checks) {
+            check.classList.add("dark-mode-check");
+        }
+
+        for (const btn of allButts) {
+            btn.classList.add("dark-mode-add-button");
+        }
     } else {
-        document.body.style.backgroundColor = "#F6F6F8";
+        document.body.style.backgroundColor = "#FAFAFA";
         backgroundTop.classList.remove("dark-mode-background-top");
         themeButton.classList.remove("dark-mode-switch");
         inputContainer.classList.remove("dark-mode-input-container");
@@ -35,6 +51,15 @@ themeButton.addEventListener("click", () => {
         }
         
         todoFoot.classList.remove("dark-mode-todo-footer");
-        filterContainer.classList.remove("dark-mode-filters");
+        
+        for (const filter of filterContainer) {
+            filter.classList.remove("dark-mode-filters");
+        }
+        
+        desktopFooter.classList.remove("dark-theme-desktop-footer");
+
+        for (const btn of allButts) {
+            btn.classList.remove("dark-mode-add-button");
+        }
     }
 })

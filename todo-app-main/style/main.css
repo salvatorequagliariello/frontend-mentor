@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-    background-color: #F6F6F8;
+    background-color: #FAFAFA;
 }
 
 .background-top {
@@ -37,7 +37,7 @@ body {
 }
 
 .dark-mode-background-top {
-    background-image: url("/images/bg-desktop-dark.jpg");
+    background-image: url("/images/bg-desktop-dark.jpg") !important;
 }
 
 .app-container {
@@ -77,10 +77,16 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url(/images/icon-moon.svg);
+
+    cursor: pointer;
+}
+
+.theme-switch:hover {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(1%) saturate(84%) hue-rotate(314deg) brightness(98%) contrast(103%);
 }
 
 .dark-mode-switch {
-    background-image: url(/images/icon-sun.svg);
+    background-image: url(/images/icon-sun.svg) !important;
 }
 
 .input-container {
@@ -100,7 +106,7 @@ body {
 }
 
 .dark-mode-input-container {
-    background-color: #25273D;
+    background-color: #25273D !important;
 }
 
 .add-button {
@@ -119,8 +125,19 @@ body {
 }
 
 .dark-mode-add-button {
-    background-color: #25273D;
-    color: var(--dark-grey-100);
+    border: 1px solid #33364A !important;
+    background-color: #25273D !important;
+}
+
+.dark-mode-add-button:hover {
+    border: 1px solid transparent !important;
+    background: linear-gradient(#25273D, #25273D) padding-box,
+    linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box !important;
+}
+
+.dark-mode-add-button:active {
+    border: 1px solid transparent !important;
+    background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box !important;
 }
 
 .checkmark {
@@ -140,6 +157,7 @@ body {
 }
 
 .check {
+    display: none;
     position: absolute;
     width: 10px;
     height: 10px;
@@ -158,8 +176,7 @@ body {
 
 #addButton:active {
     border: 1px solid transparent;
-    background:  linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
-    background-image: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
 }
 
 #inputTodo {
@@ -175,7 +192,7 @@ body {
 }
 
 .dark-mode-input-todo {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 #inputTodo:focus {
@@ -219,9 +236,9 @@ body {
 }
 
 .dark-mode-todo-container {
-    background-color: #25273D;
-    color: var(--dark-grey-100);
-    border-bottom: 1.5px solid #383B50;
+    background-color: #25273D !important;
+    color: var(--dark-grey-100) !important;
+    border-bottom: 1.5px solid #383B50 !important;
 }
 
 .left-section {
@@ -244,24 +261,30 @@ body {
     border: none;
     background: none;
     width: 25px;
+
+    cursor: pointer;
 }
 
 .todo-footer {
     width: 100%;
     padding: 1rem;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     background-color: white;
     color: var(--light-grey-600);
     font-size: 0.7rem;
     font-weight: 700;
     font-family: var(--font-primary);
-
+    
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+}
+
+.desktop-footer {
+    display: none;
 }
 
 .todo-footer p {
@@ -269,8 +292,8 @@ body {
 }
 
 .dark-mode-todo-footer {
-    background-color: #25273D;
-    color: #50526B;
+    background-color: #25273D !important;
+    color: #50526B !important;
 }
 
 
@@ -291,12 +314,12 @@ body {
 }
 
 .dark-mode-filters {
-    background-color: #25273D;
-    color: #8284a8;
+    background-color: #25273D !important;
+    color: #8284a8 !important;
 }
 
 .dark-mode-filters > button {
-    color: #8284a8;
+    color: #8284a8 !important;
 }
 
 .filter-button {

@@ -1,0 +1,200 @@
+@media screen and (min-width: 600px) {
+
+    .background-top {
+        width: 100vw;
+        height: 18.75rem;
+    
+        background-image: url("/images/bg-desktop-light.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .app-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 4.23rem;
+        
+        min-width: 33.76rem;
+        max-width: 10rem;
+    }
+
+    .title-container {
+        position: relative;
+        width: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    
+        font-family: var(--font-primary);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.5rem;
+        letter-spacing: 0.93rem;
+    
+        color: white;
+    }
+
+    .theme-switch {
+        right: -1px;
+        top: 13px;
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        vertical-align: middle;
+    
+        border: none;
+        background: none;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(/images/icon-moon.svg);
+    
+        cursor: pointer;
+    }
+
+    .input-container {
+        margin-top: 1.9rem;
+    
+        width: 100%;
+        height: 4rem;
+        padding: 0 1.5rem;
+    
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.4rem;
+    
+        background-color: white;
+        border-radius: 0.3rem;
+    }
+
+    .add-button {
+        z-index: 20;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        align-self: center;
+        vertical-align: middle;
+        
+        background: none;
+        border: 1.5px solid var(--light-grey-200);
+        border-radius: 100%;
+        
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #inputTodo {
+        width: 100%;
+        border: none;
+        background: none;
+        margin-top: 3px;
+    
+        font-family: var(--font-primary);
+        font-size: 1.2rem;
+        letter-spacing: -0.8px;
+        font-weight: 500;
+        color: var(--light-grey-800);
+    }
+
+    #inputTodo::placeholder {
+        color: var(--light-grey-800);
+        opacity: 0.6;
+    }
+
+    .todo-list {
+        margin-top: 1.5rem;
+    
+        width: 100%;
+        border-radius: 0.3rem;
+        font-family: var(--font-primary);
+        box-shadow: 0rem 3rem 20px 1px var(--light-grey-200);
+    }
+
+    .todo-container {
+        width: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        padding: 1rem 1.2em 1rem 1.3rem;
+    
+        background-color: white;
+        color: #2a2a32;
+    
+        font-size: 1.1rem;
+        font-weight: 500;
+    
+        border-bottom: 1.5px solid var(--light-grey-200);
+    }
+
+    .todo-text {
+        margin-top: 3px;
+        margin-left: 1.1rem;
+        opacity: 1;
+    }
+
+    .desktop-footer {
+        display: flex;
+        width: 100%;
+        padding: 0rem 1.5rem;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: white;
+        color: var(--light-grey-600);
+        font-size: 0.8rem;
+        font-weight: 500;
+        font-family: var(--font-primary);
+        
+        border-bottom-left-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+    }
+
+
+    .dark-theme-desktop-footer {
+        background-color: #25273D;
+    }
+
+    .app-filter-container {
+        width: fit-content;
+        align-items: center;
+    }
+
+    .todo-footer {
+        display: none;
+    }
+
+    .app-filter-container {
+        margin-top: 0rem;
+        display: none;
+    }
+
+    .desktop-filter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        gap: 0;
+    }
+
+    .app-container__text {
+        font-weight: 500;
+        font-size: 0.9rem;
+        opacity: 0.6;
+    }
+}
