@@ -77,6 +77,12 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url(/images/icon-moon.svg);
+
+    cursor: pointer;
+}
+
+.theme-switch:hover {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(1%) saturate(84%) hue-rotate(314deg) brightness(98%) contrast(103%);
 }
 
 .dark-mode-switch {
@@ -175,7 +181,7 @@ body {
 }
 
 .dark-mode-input-todo {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 #inputTodo:focus {
@@ -246,22 +252,27 @@ body {
     width: 25px;
 }
 
+
 .todo-footer {
     width: 100%;
     padding: 1rem;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     background-color: white;
     color: var(--light-grey-600);
     font-size: 0.7rem;
     font-weight: 700;
     font-family: var(--font-primary);
-
+    
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+}
+
+.desktop-footer {
+    display: none;
 }
 
 .todo-footer p {

@@ -1,0 +1,50 @@
+@media screen and (min-width: 1200px) {
+
+
+
+
+
+
+
+
+
+
+
+    .desktop-footer {
+        display: flex;
+        width: 100%;
+        padding: 0.5rem;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: white;
+        color: var(--light-grey-600);
+        font-size: 0.7rem;
+        font-weight: 700;
+        font-family: var(--font-primary);
+        
+        border-bottom-left-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+    }
+
+    .app-filter-container {
+        width: fit-content;
+        align-items: center;
+    }
+
+    .todo-footer {
+        display: none;
+    }
+
+    .app-filter-container {
+        margin-top: 0rem;
+        display: none;
+    }
+
+    .desktop-filter {
+        display: flex;
+        align-items: center;
+    }
+}
