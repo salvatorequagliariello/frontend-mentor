@@ -40,7 +40,7 @@ themeButton.addEventListener("click", () => {
             btn.classList.add("dark-mode-add-button");
         }
     } else {
-        document.body.style.backgroundColor = "#F6F6F8";
+        document.body.style.backgroundColor = "#FAFAFA";
         backgroundTop.classList.remove("dark-mode-background-top");
         themeButton.classList.remove("dark-mode-switch");
         inputContainer.classList.remove("dark-mode-input-container");

@@ -17,6 +17,7 @@ const createTodo = (text) => {
     if (text == "" || text.length <= 0) return;
 
     const todoContainer = document.getElementsByClassName("todo-container")[0].cloneNode(true);
+    todoContainer.style.display = "flex";
     const todoText = todoContainer.querySelector(".todo-text");
     todoText.innerText = text;
 
