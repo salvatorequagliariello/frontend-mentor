@@ -125,8 +125,8 @@ body {
 }
 
 .dark-mode-add-button {
+    border: 1px solid #33364A !important;
     background-color: #25273D !important;
-    color: var(--dark-grey-100);
 }
 
 .dark-mode-add-button:hover {
