@@ -5,6 +5,7 @@ const todoDivs = document.getElementsByClassName("todo-container");
 const todoFoot = document.querySelector(".todo-footer");
 const filterContainer = document.querySelectorAll(".app-filter-container");
 const desktopFooter = document.querySelector(".desktop-footer");
+const checks = document.querySelectorAll(".check");
 
 let darkTheme = false;
 
@@ -29,6 +30,11 @@ themeButton.addEventListener("click", () => {
         }
 
         desktopFooter.classList.add("dark-theme-desktop-footer");
+
+        for (const check of checks) {
+            check.classList.add("dark-mode-check");
+        }
+
     } else {
         document.body.style.backgroundColor = "#F6F6F8";
         backgroundTop.classList.remove("dark-mode-background-top");

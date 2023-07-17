@@ -9,8 +9,6 @@ const todoCountDiv = document.getElementById("todo-count");
 
 const todoAllArray = [];
 const todoCompletedArray = [];
-
-const buttonsInList = todoAllList.querySelectorAll(".add-button");
 let todoDivsCounter = 0;
 
 // ADD TODO TO ALL LIST AND ARRAY
@@ -44,10 +42,11 @@ const createTodo = (text) => {
         if (todoAllArray[parent].completed) {
             checkmark.classList.add("done-light");
             todoText.classList.add("crossed-text");
+            checkmark.querySelector(".check").style.display = "inline";
         } else {
             checkmark.classList.remove("done-light");
             todoText.classList.remove("crossed-text");
-
+            checkmark.querySelector(".check").style.display = "none";
         }
         todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
     })
@@ -65,14 +64,6 @@ const createTodo = (text) => {
 
     todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
     todoDivsCounter += 1;
-
-    todoContainer.addEventListener("dragover", (e) => {
-       e.preventDefault();
-    });
-
-    todoContainer.addEventListener("drop", (e) => {
-        
-    });
 };
 
 
