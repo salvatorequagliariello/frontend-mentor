@@ -1,11 +1,12 @@
 const inputTodo = document.getElementById("inputTodo");
 const addButton = document.getElementById("addButton");
-const allButton = document.getElementById("allButton");
-const activeButton = document.getElementById("activeButton");
-const doneButton = document.getElementById("doneButton");
+
+const allButton = document.querySelectorAll("#allButton");
+const activeButton = document.querySelectorAll("#activeButton");
+const doneButton = document.querySelectorAll("#doneButton");
 
 const todoAllList = document.getElementsByClassName("todo-list")[0];
-const todoCountDiv = document.getElementById("todo-count");
+const todoCountDiv = document.querySelectorAll("#todo-count");
 
 const todoAllArray = [];
 const todoCompletedArray = [];
@@ -31,24 +32,32 @@ const createTodo = (text) => {
         
         todoAllArray.splice(todoAllArray[parent], 1);
         closeButton.parentElement.remove();
-        todoCountDiv.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+         //aggii
+         for (const count of todoCountDiv) {
+             count.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+        }
     })
 
     checkButton.addEventListener("click", () => {
         const parent = todoAllArray.findIndex(x => checkButton.id.includes(x.number));
         todoAllArray[parent].completed = !todoAllArray[parent].completed;
         const checkmark = todoAllArray[parent].element.getElementsByClassName("checkmark")[0];
-
+        
         if (todoAllArray[parent].completed) {
             checkmark.classList.add("done-light");
             todoText.classList.add("crossed-text");
             checkmark.querySelector(".check").style.display = "inline";
+            todoCompletedArray.push(todoAllArray[parent]);
         } else {
             checkmark.classList.remove("done-light");
             todoText.classList.remove("crossed-text");
             checkmark.querySelector(".check").style.display = "none";
+            todoCompletedArray.splice(todoCompletedArray.indexOf(todoAllArray[parent]), 1);
         }
-        todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+         //aggii
+         for (const count of todoCountDiv) {
+            count.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+       }
     })
     
     todoAllArray.push({
@@ -62,7 +71,9 @@ const createTodo = (text) => {
         todoAllList.appendChild(todo.element);
     }
 
-    todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+    for (const count of todoCountDiv) {
+        count.innerText = todoCompletedArray > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
+   }
     todoDivsCounter += 1;
 };
 
@@ -72,60 +83,79 @@ addButton.addEventListener("click",() => {
     inputTodo.value = "";
 })
 
-allButton.addEventListener("click", () => {
-    for (const todo of todoAllArray) {
-        todoAllList.appendChild(todo.element);
-    }
+for (const albtn of allButton) {
+    albtn.addEventListener("click", () => {
+        for (const todo of todoAllArray) {
+            todoAllList.appendChild(todo.element);
+        }
+        
+        allButton.forEach(btn => btn.classList.add("selected-filter-light"));
+        activeButton.forEach(btn => btn.classList.remove("selected-filter-light"));
+        doneButton.forEach(btn => btn.classList.remove("selected-filter-light"));
+        
+        for (const count of todoCountDiv) {
+            count.innerText = todoAllArray.length;
+        }
+    })
+}
 
-    allButton.classList.add("selected-filter-light");
-    activeButton.classList.remove("selected-filter-light");
-    doneButton.classList.remove("selected-filter-light");
+for (const actBtn of activeButton) {
+    actBtn.addEventListener("click", () => {
+        const activeTodos = todoAllArray.filter(x => x.completed === false)
+        
+        while (todoAllList.hasChildNodes()) {
+            todoAllList.removeChild(todoAllList.firstChild);
+        }
+        
+        for (const todo of activeTodos) {
+            todoAllList.appendChild(todo.element);
+        }
+        
+        activeButton.forEach(btn => btn.classList.add("selected-filter-light"));
+        allButton.forEach(btn => btn.classList.remove("selected-filter-light"));
+        doneButton.forEach(btn => btn.classList.remove("selected-filter-light"));
+        
+        for (const count of todoCountDiv) {
+            count.innerText = todoAllArray.length - todoCompletedArray.length;
+        };
+    })
+}
 
-    todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
-})
-
-activeButton.addEventListener("click", () => {
-    const activeTodos = todoAllArray.filter(x => x.completed === false)
-
-    while (todoAllList.hasChildNodes()) {
-        todoAllList.removeChild(todoAllList.firstChild);
-    }
-
-    for (const todo of activeTodos) {
-        todoAllList.appendChild(todo.element);
-    }
-
-    activeButton.classList.add("selected-filter-light");
-    allButton.classList.remove("selected-filter-light");
-    doneButton.classList.remove("selected-filter-light");
-
-    todoCountDiv.innerText = todoCompletedArray.length > 0 ? todoAllArray.length - todoCompletedArray.length : todoAllArray.length;
-})
-
-doneButton.addEventListener("click", () => {
-    const activeTodos = todoAllArray.filter(x => x.completed === true)
-
-    while (todoAllList.hasChildNodes()) {
-        todoAllList.removeChild(todoAllList.firstChild);
-    }
-
-    for (const todo of activeTodos) {
-        todoAllList.appendChild(todo.element);
-    }
-
-    doneButton.classList.add("selected-filter-light");
-    activeButton.classList.remove("selected-filter-light");
-    allButton.classList.remove("selected-filter-light");
-
-    todoCountDiv.innerText = todoCompletedArray.length;
-})
-
+for (const dnBtn of doneButton) {
+    dnBtn.addEventListener("click", () => {
+        const activeTodos = todoAllArray.filter(x => x.completed === true)
+        
+        while (todoAllList.hasChildNodes()) {
+            todoAllList.removeChild(todoAllList.firstChild);
+        }
+        
+        for (const todo of activeTodos) {
+            todoAllList.appendChild(todo.element);
+        }
+        
+        doneButton.forEach(btn => btn.classList.add("selected-filter-light"));
+        activeButton.forEach(btn => btn.classList.remove("selected-filter-light"));
+        allButton.forEach(btn => btn.classList.remove("selected-filter-light"));
+        
+        
+        for (const count of todoCountDiv) {
+            count.innerText = todoCompletedArray.length;
+        }
+    })
+}
+    
 
 new Sortable(todoAllList, {
     animation: 150,
     ghostClass: 'blue-background-class'
 });
 
-allButton.classList.add("selected-filter-light");
-activeButton.classList.remove("selected-filter-light");
-doneButton.classList.remove("selected-filter-light");
+for (const albtn of allButton) {
+    albtn.classList.add("selected-filter-light");
+}
+for (const actBtn of activeButton) {
+    actBtn.classList.remove("selected-filter-light");
+}
+for (const dnBtn of doneButton) {
+    dnBtn.classList.remove("selected-filter-light");
+}

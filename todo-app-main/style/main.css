@@ -125,12 +125,19 @@ body {
 }
 
 .dark-mode-add-button {
-    background-color: #25273D;
+    background-color: #25273D !important;
     color: var(--dark-grey-100);
 }
 
 .dark-mode-add-button:hover {
+    border: 1px solid transparent !important;
+    background: linear-gradient(#25273D, #25273D) padding-box,
+    linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box !important;
+}
 
+.dark-mode-add-button:active {
+    border: 1px solid transparent;
+    background: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box !important;
 }
 
 .checkmark {
@@ -257,7 +264,6 @@ body {
 
     cursor: pointer;
 }
-
 
 .todo-footer {
     width: 100%;

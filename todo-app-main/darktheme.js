@@ -6,6 +6,7 @@ const todoFoot = document.querySelector(".todo-footer");
 const filterContainer = document.querySelectorAll(".app-filter-container");
 const desktopFooter = document.querySelector(".desktop-footer");
 const checks = document.querySelectorAll(".check");
+const allButts = document.querySelectorAll(".add-button");
 
 let darkTheme = false;
 
@@ -35,6 +36,9 @@ themeButton.addEventListener("click", () => {
             check.classList.add("dark-mode-check");
         }
 
+        for (const btn of allButts) {
+            btn.classList.add("dark-mode-add-button");
+        }
     } else {
         document.body.style.backgroundColor = "#F6F6F8";
         backgroundTop.classList.remove("dark-mode-background-top");
@@ -53,5 +57,9 @@ themeButton.addEventListener("click", () => {
         }
         
         desktopFooter.classList.remove("dark-theme-desktop-footer");
+
+        for (const btn of allButts) {
+            btn.classList.remove("dark-mode-add-button");
+        }
     }
 })
